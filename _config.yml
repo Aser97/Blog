@@ -33,11 +33,13 @@ social:
   instagram: https://www.instagram.com/aserlompo?igsh=MXBhbDBkZHR3YWtraQ%3D%3D&utm_source=qr
   tiktok: https://www.tiktok.com/@aserlompo?_t=ZM-8uQwpcplb30&_r=1
   x: https://x.com/aserlompo?s=21&t=QQJKjGRJo6l8wfFOZcKGPg
-  
+
 
 # Build settings
 theme: bulma-clean-theme
 permalink: pretty
+markdown: kramdown
+
 
 plugins:
   - jekyll-feed
