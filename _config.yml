@@ -18,21 +18,27 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Your awesome title
-email: your-email@example.com
+title: Boammani Aser Lompo
+email: lompoaser9@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Hi there! I'm Aser, a recent Master's graduate specializing in Large Language Models.
+  I'm passionate about Machine Learning and excited to share my experiences, insights, and projects with you on this site!
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+twitter_username: AserLompo
+github_username:  aser97
+fixed_navbar: top
+
+social:
+  instagram: https://www.instagram.com/aserlompo?igsh=MXBhbDBkZHR3YWtraQ%3D%3D&utm_source=qr
+  tiktok: https://www.tiktok.com/@aserlompo?_t=ZM-8uQwpcplb30&_r=1
+  x: https://x.com/aserlompo?s=21&t=QQJKjGRJo6l8wfFOZcKGPg
+  
 
 # Build settings
 theme: bulma-clean-theme
-remote_theme: chrisrhymes/bulma-clean-theme@v1.2.0
-force_theme: dark
+permalink: pretty
+
 plugins:
   - jekyll-feed
 

@@ -1,0 +1,7 @@
+- name: Resume
+  link: /Resume/
+- name: Research and Projects Showcase
+  #link: /about/
+  dropdown:
+    - name: Optimal Transport
+      link: /Projects/Optimal
