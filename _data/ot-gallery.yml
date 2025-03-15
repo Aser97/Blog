@@ -1,0 +1,53 @@
+- title: Example 1
+  images:
+    - link: Projects/examples/example11.PNG
+      alt: Image A
+      description: |-
+        The algorithm will get the color distribution from this image
+      ratio: is-16by9
+    - link: Projects/examples/example12.PNG
+      alt: Image B
+      description: |-
+        The algorithm will transfer the color distribution toward this image
+      ratio: is-16by9
+    - link: Projects/examples/example13.PNG
+      alt: Image C
+      description: |-
+        This is the final result.
+      ratio: is-16by9
+
+- title: Example 2
+  images:
+    - link: Projects/examples/example21.PNG
+      alt: Image A
+      description: |-
+        The algorithm will get the color distribution from this image
+      ratio: is-16by9
+    - link: Projects/examples/example22.PNG
+      alt: Image B
+      description: |-
+        The algorithm will transfer the color distribution toward this image
+      ratio: is-16by9
+    - link: Projects/examples/example23.PNG
+      alt: Image C
+      description: |-
+        This is the final result.
+      ratio: is-16by9
+
+- title: Example 3
+  images:
+    - link: Projects/examples/example31.PNG
+      alt: Image A
+      description: |-
+        The algorithm will get the color distribution from this image
+      ratio: is-16by9
+    - link: Projects/examples/example32.PNG
+      alt: Image B
+      description: |-
+        The algorithm will transfer the color distribution toward this image
+      ratio: is-16by9
+    - link: Projects/examples/example33.PNG
+      alt: Image C
+      description: |-
+        This is the final result.
+      ratio: is-16by9

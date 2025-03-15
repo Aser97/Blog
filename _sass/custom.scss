@@ -1,0 +1,39 @@
+/* Your custom styles */
+.preview-container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.preview-container img {
+  width: 350px; /* Adjust preview size */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.preview-container .hover-effect {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  padding: 5px 0;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  border-radius: 0 0 8px 8px;
+}
+
+.preview-container:hover {
+  transform: scale(1.05);
+  border-color: #007bff;
+}
+
+.preview-container:hover .hover-effect {
+  opacity: 1;
+}

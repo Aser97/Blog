@@ -5,7 +5,6 @@
 title: Resume
 #subtitle: This is the demo site for Bulma Clean Theme
 layout: page
-menubar: docs_menu
 toc: true
 ---
 
