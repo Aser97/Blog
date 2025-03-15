@@ -23,7 +23,7 @@ email: lompoaser9@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Hi there! I'm Aser, a recent Master's graduate specializing in Large Language Models.
   I'm passionate about Machine Learning and excited to share my experiences, insights, and projects with you on this site!
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/Blog" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: AserLompo
 github_username:  aser97
