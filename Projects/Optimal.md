@@ -21,9 +21,9 @@ However, this formulation cannot be solved when α and β are not probability me
 ## Full Article
 
 <div markdown="0">
-  <a href="/assets/documents/OT project.pdf">
+  <a href="{{ site.baseurl }}/assets/documents/OT project.pdf">
     <div class="preview-container">
-      <img src="/assets/thumbnails/ot_thumbnail.PNG" alt="Preview of the document"/>
+      <img src="{{ site.baseurl }}/assets/thumbnails/ot_thumbnail.PNG" alt="Preview of the document"/>
       <div class="hover-effect">Click to view</div>
     </div>
   </a>

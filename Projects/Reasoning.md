@@ -14,9 +14,9 @@ Large Language Models (LLMs) have demonstrated substantial promise in the medica
 
 ## Full Article
 <div markdown="0">
-  <a href="/assets/documents/survey.pdf">
+  <a href="{{ site.baseurl }}/assets/documents/survey.pdf">
     <div class="preview-container">
-      <img src="/assets/thumbnails/survey_thumbnail.PNG" alt="Preview of the document"/>
+      <img src="{{ site.baseurl }}/assets/thumbnails/survey_thumbnail.PNG" alt="Preview of the document"/>
       <div class="hover-effect">Click to view</div>
     </div>
   </a>
