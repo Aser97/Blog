@@ -1,0 +1,14 @@
+- title: UGI screenshots
+  images:
+    - link: assets/thumbnails/chess1.PNG
+      #alt:
+      #description:
+      ratio: is-4by3
+    - link: assets/thumbnails/chess2.PNG
+      #alt:
+      #description:
+      ratio: is-4by3
+    - link: assets/thumbnails/chess3.PNG
+      #alt:
+      #description:
+      ratio: is-4by3

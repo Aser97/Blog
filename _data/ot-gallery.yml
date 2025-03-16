@@ -1,53 +1,53 @@
 - title: Example 1
   images:
-    - link: Projects/examples/example11.PNG
+    - link: assets/thumbnails/examples/example11.PNG
       alt: Image A
       description: |-
-        The algorithm will get the color distribution from this image
+        Source image
       ratio: is-16by9
-    - link: Projects/examples/example12.PNG
+    - link: assets/thumbnails/examples/example12.PNG
       alt: Image B
       description: |-
-        The algorithm will transfer the color distribution toward this image
+        Target image
       ratio: is-16by9
-    - link: Projects/examples/example13.PNG
+    - link: assets/thumbnails/examples/example13.PNG
       alt: Image C
       description: |-
-        This is the final result.
+        Final result.
       ratio: is-16by9
 
 - title: Example 2
   images:
-    - link: Projects/examples/example21.PNG
+    - link: assets/thumbnails/examples/example21.PNG
       alt: Image A
       description: |-
-        The algorithm will get the color distribution from this image
+        Source image
       ratio: is-16by9
-    - link: Projects/examples/example22.PNG
+    - link: assets/thumbnails/examples/example22.PNG
       alt: Image B
       description: |-
-        The algorithm will transfer the color distribution toward this image
+        Target image
       ratio: is-16by9
-    - link: Projects/examples/example23.PNG
+    - link: assets/thumbnails/examples/example23.PNG
       alt: Image C
       description: |-
-        This is the final result.
+        Final result.
       ratio: is-16by9
 
 - title: Example 3
   images:
-    - link: Projects/examples/example31.PNG
+    - link: assets/thumbnails/examples/example31.PNG
       alt: Image A
       description: |-
-        The algorithm will get the color distribution from this image
+        Source image
       ratio: is-16by9
-    - link: Projects/examples/example32.PNG
+    - link: assets/thumbnails/examples/example32.PNG
       alt: Image B
       description: |-
-        The algorithm will transfer the color distribution toward this image
+        Target image
       ratio: is-16by9
-    - link: Projects/examples/example33.PNG
+    - link: assets/thumbnails/examples/example33.PNG
       alt: Image C
       description: |-
-        This is the final result.
+        Final result.
       ratio: is-16by9
