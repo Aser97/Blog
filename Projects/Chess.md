@@ -4,7 +4,7 @@
 
 layout: page
 title: Reinforcement Learning for Chess
-subtitle: SARSA & Monte Carlo Algorithms
+subtitle: Personal Coding Project, 2021
 gallery: chess-gallery
 toc: true
 ---
@@ -12,7 +12,7 @@ toc: true
 
 This project implements SARSA and Monte Carlo reinforcement learning algorithms to approximate an optimal policy for playing chess against an opponent.
 
-## Theoretical Background
+## 💡Theoretical Background
 For a deeper understanding of the algorithms used, refer to the following research papers:
 
 <div markdown="0">
@@ -34,10 +34,9 @@ For a deeper understanding of the algorithms used, refer to the following resear
 </div>
 The AI model has been trained using Stockfish at an Elo rating of 1350.
 
-## Executable
-
+## 🐙 Github Repository
 This project comes with a ready-to-run executable, primarily developed for **macOs** in C++, but it should be compatible with any **Unix**-based system.
-The full code is [here](https://github.com/Aser97/Chess.git)
+The full code is on my [Github Repository](https://github.com/Aser97/Chess.git)
 
 ### Available Gameplay Modes
 Upon running the executable, you can choose from the following options:
@@ -47,5 +46,5 @@ Upon running the executable, you can choose from the following options:
 - **Play Stockfish as White**: Play against Stockfish while controlling the white pieces
 - **Play Stockfish as Black**: Play against Stockfish while controlling the black pieces
 
-## Handling New Positions
+## 🧩Handling New Positions
 The AI utilizes Zobrist hashing to encode board positions efficiently. When encountering an unfamiliar position, it simulates multiple games against Stockfish to analyze the position and determine the best move. This process may cause a slight delay before making a move, particularly in novel board states
