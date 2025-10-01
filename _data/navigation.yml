@@ -3,15 +3,15 @@
 - name: 🎨 Portfolio
   #link: /about/
   dropdown:
-    - name: Modality Swap
+    - name: 🔄 Modality Swap
       link: /Projects/Modality-Swap
-    - name: Visual-TableQA
+    - name: 📊 Visual-TableQA
       link: /Projects/Visual-TableQA
-    - name: Parametric Multi-Armed-Bandit
+    - name: 📈 Parametric Multi-Armed-Bandit
       link: /Projects/MAB
-    - name: Optimal Transport
+    - name: ⚖️ Optimal Transport
       link: /Projects/Optimal
-    - name: LLM Number Encoding
+    - name: 🧮 LLM Number Encoding
       link: /Projects/LESA
     - name: 🧠 Reasoning in NLP
       link: /Projects/Reasoning

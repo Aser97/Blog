@@ -37,3 +37,36 @@
 .preview-container:hover .hover-effect {
   opacity: 1;
 }
+
+/* Hidden by default */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 2rem;
+}
+
+/* Show lightbox when targeted */
+.lightbox:target {
+  display: flex;
+}
+
+/* Close area (click anywhere outside image) */
+.lightbox-close {
+  position: absolute;
+  inset: 0;
+  cursor: zoom-out;
+}
+
+/* Image styling */
+.lightbox img {
+  max-width: 90vw;
+  max-height: 90vh;
+  z-index: 10000;
+  border-radius: 6px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
