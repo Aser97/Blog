@@ -8,7 +8,7 @@ layout: page
 toc: true
 ---
 
-## Education
+## 🎓 Education
 
 - **2023-Present** Machine Learning Master of Research
 **MILA/ETS, Montréal**
@@ -19,35 +19,26 @@ toc: true
 - **2019-2021** Master of Fundamental Mathematics / Agrégation de Mathématiques
 **Ecole Normale Supérieure, Rennes**
 
-- **2018-2019** Licence of Fundamental Mathematics
-**Ecole Normale Supérieure, Rennes**
 
-- **2017-2018** Engineering Education
-**Ecole Centrale Supelec, Paris**
-
-- **2015-2017** Classe Préparatoire Math/Physics/Computer Science
-**Lycée Louis-Le-Grand, Paris**
-*Selective high school scientific studies in math, physics, and computer science leading up to competitive nationwide entrance examinations to the Grandes Écoles.*
-
-## Research
+## 📄 Research
+- **Boammani Aser Lompo, Marc Haraoui**
+  *MODALITY-SWAP DISTILLATION, Rendering Textual Reasoning into Visual Supervision.* Under review as a conference paper at [ICLR 2026]({{ site.baseurl }}/assets/documents/Visual_TableQA_ICLR_2026.pdf)
+- **Boammani Aser Lompo, Marc Haraoui**
+  *Visual-TableQA: Open-Domain Benchmark for Reasoning over Table Images.* [NeurIPS 2025 Workshop on Foundations of Reasoning in Language Models](https://arxiv.org/pdf/2509.07966)
 - **Boammani Aser Lompo, Thanh-Dung Le, Philippe Jouvet, Rita Noumeir**  
-  *Multi-objective Representation for Numbers in Clinical Narratives: A CamemBERT-Bio-Based Alternative to Large-Scale LLMs* [2024](https://doi.org/10.48550/arXiv.2405.18448)**  
-
-- **Boammani Aser Lompo, Thanh-Dung Le, Philippe Jouvet, Rita Noumeir**  
-  *Are Medium-Sized Transformers Models still Relevant for Medical Records Processing?* [2024](https://doi.org/10.48550/arXiv.2404.10171)  
-
+  *Multi-objective Representation for Numbers in Clinical Narratives: A CamemBERT-Bio-Based Alternative to Large-Scale LLMs.* [CoRR 2024](https://doi.org/10.48550/arXiv.2405.18448)
 - **Camille-Sovanneary Gauthier, Romaric Gaudel, Elisa Fromont, Boammani Aser Lompo.**  
-  *Parametric Graph for Unimodal Ranking Bandit.* ICML’21, [2021](https://hal.archives-ouvertes.fr/hal-03256621/)
+  *Parametric Graph for Unimodal Ranking Bandit.* [ICML 2021](https://hal.archives-ouvertes.fr/hal-03256621/)
 
-- #### Reviewer for CVPR and ICCV
+- #### Reviewer for ICCV 2023, CVPR 2026, and ICLR 2026
 ---
 
-## Research Interests  
+## 🎯Interests  
 - Applied Mathematics
-- Natural Language Processing and LLM (reasoning, scaling, training)
+- AI/ML (Reasoning, Foundational models, Reinforcement Learning)
 - AI Fairness
 
-## Internships
+## 💼Internships
 
 - Department of Statistics at [CREST](https://crest.science/) - **ENSAI, Rennes (2020)**  
   - **Project:** Unimodal Bandits for ranking systems(Recommender systems, Multi-Armed Bandits, Learning to rank, Unimodal Bandits)
@@ -57,22 +48,16 @@ toc: true
   - **Project:** Measuring privacy of cryptographic systems and studying the properties of optimal-privacy systems  
   - **Supervisor:** [Catuscia Palamidessi](https://scholar.google.fr/citations?user=OOgAyqgAAAAJ&hl=fr&oi=sra)
 
-- Database Management - **[AREVA-Edvance](https://www.edvance.fr/connaitre-edvance), Paris (2018)**  
-  - **Team:** DCIS - Managed data collection and organization from multiple teams involved in nuclear plant design.  
-  - **Tasks:**
-    - Develop algorithms to automate database entry (VBA)  
-    - Create algorithms to visualize database structure for verification (Python)
-    - **Supervisor:** [Martin Klein-Jaby](https://linkedin.com/in/martine-klein-jaby-1abaa837)
-
 - Programming - **[SOBATEN](https://www.sobaten.com/), Paris (2018)**  
   - **Project:** Designed an Enterprise Resource Planning (ERP) system for a 100 employees company  
   - **Supervisor:** Cedric Grondin (cgrondin@sobaten.com)
 
 ---
 
-## Distinctions  
+## 🌟Distinctions  
 - **Best Oral Presentation**, 91e Congrès de l'Acfas au CHU Sainte-Justine, CHU Sainte Justine, Canada (2024)
-- **Scholarship:** Recipient of the R-SADC 2023-2024 research grant  
+- **Scholarship:** Recipient of the R-SADC 2023-2024 research grant (23k)
+- **Scholarship:** French Government Excellence Grant (48k)
 - **Math Achievements:**
   - Winner of the national Math contest (2015, Burkina Faso)  
   - Gold Medal at the Pan-African Mathematics Olympiad (2015, Abuja)  
@@ -80,13 +65,11 @@ toc: true
 
 ---
 
-## Other competences  
+## 🇬🇧 🇫🇷Languages  
 
 - **English:** Fluent (Conversationally fluent)  
 - **French:** Native speaker  
-- **Hebrew:** Basic (Basic words and phrases only)  
 
-## Hobbies
-- Guitar  
+## 🌍 Hobbies
 - Chess: I represented Burkina Faso at the 2024 International Chess Olympiad in Budapest
 - Travelling and Hiking

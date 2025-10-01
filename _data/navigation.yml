@@ -1,6 +1,6 @@
-- name: Resume
+- name: 💼 Resume
   link: /Resume/
-- name: Research and Projects Showcase
+- name: 🎨 Portfolio
   #link: /about/
   dropdown:
     - name: Modality Swap
@@ -13,7 +13,7 @@
       link: /Projects/Optimal
     - name: LLM Number Encoding
       link: /Projects/LESA
-    - name: Reasoning in NLP
+    - name: 🧠 Reasoning in NLP
       link: /Projects/Reasoning
-    - name: RL for Chess
+    - name: ♟️ RL for Chess
       link: /Projects/Chess
