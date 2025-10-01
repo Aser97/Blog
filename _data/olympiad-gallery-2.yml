@@ -1,0 +1,7 @@
+- images:
+    - link: assets/Olympiads/team-2.jpg
+      ratio: is-16by9
+    - link: assets/Olympiads/team-1.jpg
+      ratio: is-16by9
+    - link: assets/Olympiads/team-6.jpg
+      ratio: is-16by9

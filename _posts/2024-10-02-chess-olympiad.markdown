@@ -1,13 +1,23 @@
 ---
 layout: post
-title:  "45th Chess Olympiad"
+title:  "♟️ 45th Chess Olympiad"
+subtitle: A Historic Celebration
 date:   2024-10-02
+author: Boammani Aser Lompo
 categories: jekyll update
 ---
-The Chess Olympiads are the biggest event in the world of chess. Every two years this international event gather all the nations members (198) of the Internation Chess Federation (FIDE) in a team vs team format to decide the greatest nation in chess. I had the immense privilege to represent Burkina Faso for their first participation in this event
+The Chess Olympiad is the biggest event in the chess world. Every two years, all 198 member nations of the International Chess Federation (FIDE) gather for a team vs. team competition to crown the strongest chess nation.
 
-This year edition's was extremely awaited for several reasons.
-First, this edition was celebrating the 100th anniversary of FIDE. For this occasion an olympic torch was turned on and crossed many nations from Eastern Europe to Western America, passing by Africa and Asia. The olympic torch concluded its journey in the hands of the legendary Judith Polgar (best female chess player of all time) who carried it in Budapest (her hometown) for the grandiose opening ceremony of the olympiads.
+This year, I had the immense privilege of representing Burkina Faso in our country’s very first participation.
+
+
+{% include gallery.html id="olympiad-gallery-1" %}
+
+### 🔥Why this edition was special
+This Olympiad carried a unique weight for two reasons:
+
+##### 🎂The 100th anniversary of FIDE
+To mark the centenary, a symbolic Olympic torch traveled across continents—from Eastern Europe to Western America, passing through Africa and Asia. Its journey culminated in Budapest, carried by the legendary Judit Polgár (widely regarded as the greatest female player of all time), who lit the flame at a grand opening ceremony in her hometown.
 
 <div markdown="0" style="text-align:center;">
   <a href="#img-torch">
@@ -26,7 +36,13 @@ First, this edition was celebrating the 100th anniversary of FIDE. For this occa
   <img src="{{ site.baseurl }}/assets/Olympiads/torch.jpg" alt="Full-size preview">
 </div>
 
-The second reason was the very anticipated clash between the legends of the old generation (Magnus Carlsen , Fabiano Caruana, Levon Aronian, Ding Liren etc.) and the rising young talents (Gukesh D., Pragnanandha R., Nodirbek A., etc.). Since the pandemic 2020, Chess has never been so popular and thousands of fans were regularly following the tournament from everywhere. Among all the stories and intrigues that happened during the tournament, the main one will definetly be the historic performance of the Indian team who won first place and their leader Gukesh D. (challenger for the World Champion match later this year) had an historical Elo performance of 3000, second highest in the history of the tournament.
+##### ⚔️ A generational clash at the very top
+Fans were thrilled to witness titans like Magnus Carlsen, Fabiano Caruana, Levon Aronian, and Ding Liren face off against the game’s brightest young stars—Dommaraju Gukesh, Rameshbabu Praggnanandhaa, Nodirbek Abdusattorov, and others. Since the pandemic in 2020, chess has never been so widely followed, with thousands of fans tracking the event live each day.
+
+{% include gallery.html id="olympiad-gallery-2" %}
+
+### 🏆 Grand finale
+Among all the storylines and surprises, one stood out: the historic victory of Team India. Led by 18-year-old Gukesh D., the Indians clinched gold. Gukesh himself delivered a staggering 3000 Elo performance, the second-highest in Olympiad history, firmly establishing him as the challenger for the World Championship match later this year.
 
 <div markdown="0" style="text-align:center;">
   <a href="#img-winners">
