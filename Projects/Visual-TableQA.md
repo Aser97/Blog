@@ -18,7 +18,7 @@ Addressing this gap, we introduce **Visual-TableQA**, a large-scale, open-domain
 
 Empirical results show that models fine-tuned on **Visual-TableQA** generalize robustly to external benchmarks, outperforming several proprietary models despite the dataset’s synthetic nature.  
 
-The full pipeline and resources are publicly available in our [GitHub repository](https://github.com/AI-4-Everyone/Visual-TableQA).
+The full pipeline and resources are publicly available in our [GitHub repository](https://github.com/AI-4-Everyone/Visual-TableQA-v2).
 
 ## 📘 Full Article
 <div markdown="0">
