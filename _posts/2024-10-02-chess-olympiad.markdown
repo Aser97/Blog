@@ -33,7 +33,7 @@ To mark the centenary, a symbolic Olympic torch traveled across continents—fro
 
 <!-- Lightbox -->
 <div id="img-torch" class="lightbox" markdown="0">
-  <a href="#" class="lightbox-close"></a>
+  <a href="#!" class="lightbox-close"></a>
   <img src="{{ site.baseurl }}/assets/Olympiads/torch.jpg" alt="Full-size preview">
 </div>
 
@@ -58,7 +58,7 @@ Among all the storylines and surprises, one stood out: the historic victory of T
 
 <!-- Lightbox -->
 <div id="img-winners" class="lightbox" markdown="0">
-  <a href="#" class="lightbox-close"></a>
+  <a href="#!" class="lightbox-close"></a>
   <img src="{{ site.baseurl }}/assets/Olympiads/winners.jpg" alt="Full-size preview">
 </div>
 

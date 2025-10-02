@@ -21,3 +21,5 @@
   dropdown:
     - name: ♟️ 45th Chess Olympiad
       link: /chess-olympiad/
+    - name: ⚖️ Unbalanced Optimal Transport
+      link: /color-transfer/
