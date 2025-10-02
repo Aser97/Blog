@@ -6,6 +6,7 @@ layout: page
 title: Training Language Models for Reasoning
 subtitle: NLP Reading Group at MILA (Montreal), 2024
 toc: true
+hero_height: is-small
 ---
 
 ## 💡Abstract

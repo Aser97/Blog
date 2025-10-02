@@ -78,3 +78,10 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+.subtitle {
+  margin-left: 2em;   /* indent subtitle */
+  font-size: 1.2rem;  /* optional: make subtitle smaller */
+  color: #555;        /* optional: dim subtitle color */
+  font-style: italic;
+}

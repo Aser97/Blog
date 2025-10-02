@@ -8,6 +8,14 @@
                 </span>
               </a>
         {% endif %}
+        {% if site.social.email %}
+            <a href="mailto:{{ site.social.email }}" class="button is-medium">
+              <span class="icon is-medium">
+                <i class="fa-solid fa-envelope fa-xl"></i>
+                <span class="is-sr-only">Email</span>
+              </span>
+            </a>
+        {% endif %}
         {% if site.social.x %}
             <a href="{{ site.social.x }}" class="button is-medium">
                 <span class="icon is-medium">

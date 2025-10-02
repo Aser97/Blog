@@ -5,6 +5,7 @@ subtitle: A Historic Celebration
 date:   2024-10-02
 author: Boammani Aser Lompo
 categories: jekyll update
+permalink: /chess-olympiad/
 ---
 The Chess Olympiad is the biggest event in the chess world. Every two years, all 198 member nations of the International Chess Federation (FIDE) gather for a team vs. team competition to crown the strongest chess nation.
 

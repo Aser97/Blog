@@ -6,6 +6,7 @@ layout: page
 title: Parametric Graph for Unimodal Ranking Bandit
 subtitle: Accepted at ICML 2021.
 toc: true
+hero_height: is-small
 ---
 
 ## 💡Abstract

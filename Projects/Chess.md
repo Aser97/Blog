@@ -7,6 +7,7 @@ title: Reinforcement Learning for Chess
 subtitle: Personal Coding Project, 2021
 gallery: chess-gallery
 toc: true
+hero_height: is-small
 ---
 
 

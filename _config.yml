@@ -18,19 +18,6 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Boammani Aser Lompo
-email: lompoaser9@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  👋 Hi, I’m Boammani Aser Lompo!
-  I hold 3 MSc in Mathematics and Machine Learning, with a strong focus on Visual Reasoning,
-  Reinforcement Learning, and Applied Mathematics. My work is driven by a passion for
-  advancing multimodal AI and finding elegant ways to bridge theory and application.
-
-  I’m especially interested in NLP, Large Language Models, Reinforcement Learning, and
-  Mathematics—fields where rigorous foundations meet exciting real-world impact. Here you’ll
-  find my research projects, publications, and portfolio.
-
-  Welcome, and thanks for stopping by! 🚀
 
 baseurl: "/Blog" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
@@ -40,6 +27,7 @@ fixed_navbar: top
 
 social:
   github: https://github.com/Aser97
+  email: lompoaser9@gmail.com
   x: https://x.com/aserlompo?s=21&t=QQJKjGRJo6l8wfFOZcKGPg
   instagram: https://www.instagram.com/aserlompo?igsh=MXBhbDBkZHR3YWtraQ%3D%3D&utm_source=qr
   tiktok: https://www.tiktok.com/@aserlompo?_t=ZM-8uQwpcplb30&_r=1

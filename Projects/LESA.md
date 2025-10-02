@@ -6,6 +6,7 @@ layout: page
 title: Multi-objective Representation for Numbers in Clinical Narratives
 subtitle: Submitted at CoRR 2024.
 toc: true
+hero_height: is-small
 ---
 
 ## 💡 Abstract

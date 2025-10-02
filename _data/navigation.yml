@@ -17,3 +17,7 @@
       link: /Projects/Reasoning
     - name: ♟️ RL for Chess
       link: /Projects/Chess
+- name: 📰📸 Posts
+  dropdown:
+    - name: ♟️ 45th Chess Olympiad
+      link: /chess-olympiad/
