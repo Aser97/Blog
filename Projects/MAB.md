@@ -9,6 +9,16 @@ toc: true
 hero_height: is-small
 ---
 
+## 📘Full Article
+<div markdown="0">
+  <a href="https://proceedings.mlr.press/v139/gauthier21a">
+    <div class="preview-container" style="width: 170px;">
+      <img src="{{ site.baseurl }}/assets/thumbnails/MAB_thumbnail.png" alt="Preview of the document">
+      <div class="hover-effect">Click to view</div>
+    </div>
+  </a>
+</div>
+
 ## 💡Abstract
 
 We tackle the online ranking problem of assigning L items to K positions on a web page in order to maximize the number of user clicks. We propose an original algorithm, easy to implement and with strong theoretical guarantees to tackle this problem in the Position-Based Model (PBM) setting, well suited for applications where items are displayed on a grid. Besides learning to rank, our
@@ -16,14 +26,42 @@ algorithm, GRAB (for parametric Graph for unimodal RAnking Bandit), also learns 
 among L. The logarithmic regret bound of this algorithm is a direct consequence of the unimodality property of the bandit setting with respect to
 the learned graph. Experiments against state-of-the-art learning algorithms which also tackle the PBM setting, show that our method is more efficient while giving regret performance on par with the best known algorithms on simulated and real life datasets
 
-## 📘Full Article
-<div markdown="0">
-  <a href="https://proceedings.mlr.press/v139/gauthier21a">
-    <div class="preview-container">
-      <img src="{{ site.baseurl }}/assets/thumbnails/MAB_thumbnail.png" alt="Preview of the document"/>
+## Results
+The theoretical results of our algorithm compared to pre-existing state of the art models are presented in the following Table:
+
+<div markdown="0" style="text-align:center;">
+  <a href="#img-sample">
+    <div class="preview-container" style="display:inline-block;">
+      <img src="{{ site.baseurl }}/assets/MAB/results-1.png"
+           alt="Preview of the document"
+           style="display:block; margin:0 auto; float:none; max-width:100%; height:auto;">
       <div class="hover-effect">Click to view</div>
     </div>
   </a>
+</div>
+<!-- Lightbox -->
+<div id="img-sample" class="lightbox" markdown="0">
+  <a href="#!" class="lightbox-close"></a>
+  <img src="{{ site.baseurl }}/assets/MAB/results-1.png" alt="Full-size preview">
+</div>
+
+One can see how our hypothesis are lighter and our theoretical regret as the lowest Upper bound accross the different approaches.
+
+These theoretical results are supported by our experiments, with the exception of **PB-MHB** which reached the best performances but **PB-MHB** is more than ten times slower to deliver a recommendation than GRAB and it does not have any theoretical guarantees.
+
+<div markdown="0" style="text-align:center;">
+  <a href="#img-juries">
+    <div class="preview-container" style="width: 570px;">
+      <img src="{{ site.baseurl }}/assets/MAB/results-2.png"
+           alt="Preview of the document">
+      <div class="hover-effect">Click to view</div>
+    </div>
+  </a>
+</div>
+<!-- Lightbox -->
+<div id="img-juries" class="lightbox" markdown="0">
+  <a href="#!" class="lightbox-close"></a>
+  <img src="{{ site.baseurl }}/assets/MAB/results-2.png" alt="Full-size preview">
 </div>
 
 ## 🐙 Github Repository

@@ -14,10 +14,9 @@ For instance, consider a city with many bakeries spread across its area. This de
 
 <div markdown="0" style="text-align:center;">
   <a href="#img-illustration">
-    <div class="preview-container" style="display:inline-block;">
+    <div class="preview-container" style="width: 450px;">
       <img src="{{ site.baseurl }}/assets/color_notebook_files/OT_illustration.png"
-           alt="Preview of the document"
-           style="display:block; margin:0 auto; float:none; width:500px; height:auto;">
+           alt="Preview of the document">
       <div class="hover-effect">Click to view</div>
     </div>
   </a>
@@ -268,10 +267,9 @@ plt.savefig('example23.PNG')
 
 <div markdown="0" style="text-align:center;">
   <a href="#img-output">
-    <div class="preview-container" style="display:inline-block;">
+    <div class="preview-container" style="width: 450px;">
       <img src="{{ site.baseurl }}/assets/color_notebook_files/color_notebook_15_0.png"
-           alt="Preview of the document"
-           style="display:block; margin:0 auto; float:none; width:500px; height:auto;">
+           alt="Preview of the document">
       <div class="hover-effect">Click to view</div>
     </div>
   </a>

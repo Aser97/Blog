@@ -12,8 +12,8 @@ The Chess Olympiad is the biggest event in the chess world. Every two years, all
 This year, I had the immense privilege of representing Burkina Faso in our country’s very first participation.
 
 
-{% include gallery.html id="olympiad-gallery-1" %}
-
+{% include gallery.html id="olympiad-gallery-1" thumb_width="260" %}
+----
 ### 🔥Why this edition was special
 This Olympiad carried a unique weight for two reasons:
 
@@ -40,8 +40,8 @@ To mark the centenary, a symbolic Olympic torch traveled across continents—fro
 ##### ⚔️ A generational clash at the very top
 Fans were thrilled to witness titans like Magnus Carlsen, Fabiano Caruana, Levon Aronian, and Ding Liren face off against the game’s brightest young stars—Dommaraju Gukesh, Rameshbabu Praggnanandhaa, Nodirbek Abdusattorov, and others. Since the pandemic in 2020, chess has never been so widely followed, with thousands of fans tracking the event live each day.
 
-{% include gallery.html id="olympiad-gallery-2" %}
-
+{% include gallery.html id="olympiad-gallery-2" thumb_width="260" %}
+----
 ### 🏆 Grand finale
 Among all the storylines and surprises, one stood out: the historic victory of Team India. Led by 18-year-old Gukesh D., the Indians clinched gold. Gukesh himself delivered a staggering 3000 Elo performance, the second-highest in Olympiad history, firmly establishing him as the challenger for the World Championship match later this year.
 

@@ -14,10 +14,9 @@ This is a mini project I've made and supervised by Gabriel PEYRE during my MVA M
 
 <div markdown="0" style="text-align:center;">
   <a href="#img-illustration">
-    <div class="preview-container" style="display:inline-block;">
+    <div class="preview-container" style="width: 470px;">
       <img src="{{ site.baseurl }}/assets/color_notebook_files/OT_illustration.png"
-           alt="Preview of the document"
-           style="display:block; margin:0 auto; float:none; width:500px; height:auto;">
+           alt="Preview of the document">
       <div class="hover-effect">Click to view</div>
     </div>
   </a>
@@ -29,6 +28,17 @@ This is a mini project I've made and supervised by Gabriel PEYRE during my MVA M
 </div>
 [Source](https://www.cnblogs.com/liuzhen1995/p/14524932.html#a6)
 
+## 📘Full Article
+
+<div markdown="0">
+  <a href="{{ site.baseurl }}/assets/documents/OT project.pdf">
+    <div class="preview-container" style="width: 140px;">
+      <img src="{{ site.baseurl }}/assets/thumbnails/ot_thumbnail.PNG" alt="Preview of the document">
+      <div class="hover-effect">Click to view</div>
+    </div>
+  </a>
+</div>
+
 ## 💡Abstract
 The goal of this presentation is to study the optimal transport problem in a context where the initial and target distributions do not have the same mass.
 
@@ -36,16 +46,6 @@ The Kantorovich formulation of the Optimal Transport problem is as follows: Supp
 
 However, this formulation cannot be solved when α and β are not probability measures of the same mass. This study focuses on addressing this issue. We will introduce a more general formulation of the Optimal Transport problem that can handle this case and propose a generalization of the Sinkhorn algorithm to solve it. Additionally, we will demonstrate how this algorithm applies to the Wasserstein barycenter problem and present several illustrations showcasing its performance on different problems. This work follows [Chizat et al., 2016](https://arxiv.org/abs/1607.05816).
 
-## 📘Full Article
-
-<div markdown="0">
-  <a href="{{ site.baseurl }}/assets/documents/OT project.pdf">
-    <div class="preview-container">
-      <img src="{{ site.baseurl }}/assets/thumbnails/ot_thumbnail.PNG" alt="Preview of the document"/>
-      <div class="hover-effect">Click to view</div>
-    </div>
-  </a>
-</div>
 
 ## 🐙 Github Repository
 

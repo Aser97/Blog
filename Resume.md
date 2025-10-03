@@ -40,11 +40,11 @@ toc: true
 
 ## 💼Internships
 
-- Department of Statistics at [CREST](https://crest.science/) - **ENSAI, Rennes (2020)**  
+- Department of Statistics at [CREST](https://crest.science/) - **ENSAI, Rennes (2021)**  
   - **Project:** Unimodal Bandits for ranking systems(Recommender systems, Multi-Armed Bandits, Learning to rank, Unimodal Bandits)
   - **Supervisor:** [Romaric Gaudel](https://scholar.google.fr/citations?user=wD65M6kAAAAJ&hl=fr&oi=sra)
 
-- Research [COMETE Lab](https://www.inria.fr/fr/comete) - **INRIA, Polytechnique, Paris (2019)**  
+- Research [COMETE Lab](https://www.inria.fr/fr/comete) - **INRIA, Polytechnique, Paris (2020)**  
   - **Project:** Measuring privacy of cryptographic systems and studying the properties of optimal-privacy systems  
   - **Supervisor:** [Catuscia Palamidessi](https://scholar.google.fr/citations?user=OOgAyqgAAAAJ&hl=fr&oi=sra)
 
@@ -57,19 +57,20 @@ toc: true
 ## 🌟Distinctions  
 - **Best Oral Presentation**, 91e Congrès de l'Acfas au CHU Sainte-Justine, CHU Sainte Justine, Canada (2024)
 - **Scholarship:** Recipient of the R-SADC 2023-2024 research grant (23k)
-- **Scholarship:** French Government Excellence Grant (48k)
+- **Scholarship:** French Government Excellence Grant (50k)
 - **Math Achievements:**
-  - Winner of the national Math contest (2015, Burkina Faso)  
+  - Honourable Mention at the International Mathematics Olympiad (**IMO**)(2014, Cape Town)
   - Gold Medal at the Pan-African Mathematics Olympiad (2015, Abuja)  
-  - Honourable Mention at the International Mathematics Olympiad (2014, Cape Town)  
+  - Winner of the national Math contest (2015, Burkina Faso)  
+
 
 ---
 
 ## 🇬🇧 🇫🇷Languages  
 
-- **English:** Fluent (Conversationally fluent)  
-- **French:** Native speaker  
+- **English:** Fluent
+- **French:** Native  
 
 ## 🌍 Hobbies
-- Chess: I represented Burkina Faso at the 2024 International Chess Olympiad in Budapest
+- Chess: I represented Burkina Faso at the [45th International Chess Olympiad in Budapest]({% post_url 2024-10-02-chess-olympiad %})
 - Travelling and Hiking

@@ -9,6 +9,17 @@ toc: true
 hero_height: is-small
 ---
 
+## 📘 Full Article
+<div markdown="0">
+  <a href="https://arxiv.org/abs/2405.18448">
+    <div class="preview-container" style="width: 170px;">
+      <img src="{{ site.baseurl }}/assets/thumbnails/Lesa_Xval_thumbnail.png" alt="Preview of the document">
+      <div class="hover-effect">Click to view</div>
+    </div>
+  </a>
+</div>
+
+
 ## 💡 Abstract
 
 The processing of numerical values is a rapidly developing area in the field of Language Models (LLMs). Despite numerous advancements achieved by previous research, significant challenges persist, particularly within the healthcare domain. This paper investigates the limitations of Transformer models in understanding numerical values.  
@@ -21,15 +32,42 @@ The processing of numerical values is a rapidly developing area in the field of 
 
 **Conclusions and Novelty:** This study introduces two innovative techniques for handling numerical data, which are also applicable to other modalities. We illustrate how these techniques can improve the performance of Transformer-based models, achieving more reliable classification results even with small datasets.
 
+## 📈 Results
 
-## 📘 Full Article
-<div markdown="0">
-  <a href="https://arxiv.org/abs/2405.18448">
-    <div class="preview-container">
-      <img src="{{ site.baseurl }}/assets/thumbnails/Lesa_Xval_thumbnail.png" alt="Preview of the document"/>
+We work with **CamemBERT**, an encoder model, and extend it with a customized decoder inspired by the [Xval paper](https://arxiv.org/abs/2310.02989). The architecture is illustrated below:
+
+<div markdown="0" style="text-align:center;">
+  <a href="#img-arch">
+    <div class="preview-container" style="width: 500px;">
+      <img src="{{ site.baseurl }}/assets/LESA/diagram.png"
+           alt="Preview of the document">
       <div class="hover-effect">Click to view</div>
     </div>
   </a>
+</div>
+<!-- Lightbox -->
+<div id="img-arch" class="lightbox" markdown="0">
+  <a href="#!" class="lightbox-close"></a>
+  <img src="{{ site.baseurl }}/assets/LESA/diagram.png" alt="Full-size preview">
+</div>
+
+Training loss is computed from this encoder–decoder setup.  
+
+The results are highly encouraging: our model achieves performance comparable to **GPT-4**, despite being thousands of times smaller in parameter count.
+
+<div markdown="0" style="text-align:center;">
+  <a href="#img-results">
+    <div class="preview-container" style="width: 350px;">
+      <img src="{{ site.baseurl }}/assets/LESA/results.png"
+           alt="Preview of the document">
+      <div class="hover-effect">Click to view</div>
+    </div>
+  </a>
+</div>
+<!-- Lightbox -->
+<div id="img-results" class="lightbox" markdown="0">
+  <a href="#!" class="lightbox-close"></a>
+  <img src="{{ site.baseurl }}/assets/LESA/results.png" alt="Full-size preview">
 </div>
 
 ## 🐙 Github Repository

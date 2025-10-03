@@ -5,11 +5,17 @@
   cursor: pointer;
   border: 2px solid transparent;
   transition: transform 0.2s ease, border-color 0.2s ease;
+
+  /* NEW: let this define the visual size */
+  width: 350px;              /* default; override per-instance */
 }
 
 .preview-container img {
-  width: 350px; /* Adjust preview size */
+  /* CHANGE: image fills the container */
+  display: block;
+  width: 100%;
   height: auto;
+
   border-radius: 8px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
@@ -18,7 +24,7 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 100%;
+  width: 100%;               /* now matches container width */
   background: rgba(0, 0, 0, 0.7);
   color: white;
   text-align: center;
@@ -36,6 +42,40 @@
 
 .preview-container:hover .hover-effect {
   opacity: 1;
+}
+
+/* Make the preview match the column width */
+.columns .preview-container {
+  width: 100%;
+}
+
+/* Ensure thumbnail scales with the container */
+.columns .preview-container img {
+  width: 100%;
+  height: auto;
+}
+
+/* Space below each thumbnail so rows don't feel jammed */
+.columns .preview-container {
+  margin-bottom: 0.75rem;
+}
+
+/* On hover, sit above neighbors so scale doesn't collide */
+.preview-container:hover {
+  z-index: 2;
+}
+
+/* Make preview fill the Bulma ratio box */
+.image .preview-container {
+  width: 100%;
+  height: 100%;
+}
+
+.image .preview-container img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover; /* keeps uniform height; crop edges if needed */
 }
 
 /* Hidden by default */

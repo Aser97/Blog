@@ -11,7 +11,7 @@
       {%- assign sections = g -%}
     {%- endif -%}
 
-    <div class="columns is-multiline">
+    <div class="columns is-multiline is-variable is-2">
       {%- for section in sections -%}
         {%- if section.title -%}
           <div class="column is-12"><h3 class="title is-5">{{ section.title }}</h3></div>
@@ -29,11 +29,38 @@
           {%- assign alt = img.alt | default: img.caption | default: '' -%}
 
           <div class="column is-one-third">
-            {%- include image-modal.html
-              ratio=ratio
-              link=link
-              alt=alt
-              large_link=large_link -%}
+            {%- assign ratio = img.ratio | default: 'is-16by9' -%}
+            {%- assign link = img.link -%}
+            {%- if link and link != '' and link | slice: 0,1 != '/' -%}
+              {%- assign link = '/' | append: link -%}
+            {%- endif -%}
+            {%- assign large_link = img.large_link | default: link -%}
+            {%- assign alt = img.alt | default: img.caption | default: '' -%}
+
+            {%- comment -%}
+              Build a unique id: <gallery id>-<section idx>-<image idx>
+            {%- endcomment -%}
+            {%- assign sidx = forloop.parentloop.index | default: 1 -%}
+            {%- assign iidx = forloop.index -%}
+            {%- assign uid = gid | append: '-' | append: sidx | append: '-' | append: iidx -%}
+
+            <!-- Bulma ratio wrapper to keep uniform tile height -->
+            <figure class="image {{ ratio }}">
+              <!-- Thumbnail -->
+              <a href="#lb-{{ uid }}" class="gallery-item">
+                <div class="preview-container" style="width:100%; height:100%;">
+                  <img src="{{ link | relative_url }}" alt="{{ alt }}">
+                  <div class="hover-effect">Click to view</div>
+                </div>
+              </a>
+            </figure>
+
+            <!-- Lightbox -->
+            <div id="lb-{{ uid }}" class="lightbox" markdown="0">
+              <a href="#!" class="lightbox-close"></a>
+              <img src="{{ large_link | relative_url }}" alt="{{ alt }}">
+            </div>
+
             {%- if img.description -%}
               <div class="content is-small" style="margin-top:.4rem;">
                 {{ img.description | markdownify }}
