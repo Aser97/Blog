@@ -26,8 +26,9 @@ algorithm, GRAB (for parametric Graph for unimodal RAnking Bandit), also learns 
 among L. The logarithmic regret bound of this algorithm is a direct consequence of the unimodality property of the bandit setting with respect to
 the learned graph. Experiments against state-of-the-art learning algorithms which also tackle the PBM setting, show that our method is more efficient while giving regret performance on par with the best known algorithms on simulated and real life datasets
 
-## Results
-The theoretical results of our algorithm compared to pre-existing state of the art models are presented in the following Table:
+## 📊 Results  
+
+The theoretical performance of our algorithm compared to existing state-of-the-art methods is shown in the table below:  
 
 <div markdown="0" style="text-align:center;">
   <a href="#img-sample">
@@ -45,9 +46,9 @@ The theoretical results of our algorithm compared to pre-existing state of the a
   <img src="{{ site.baseurl }}/assets/MAB/results-1.png" alt="Full-size preview">
 </div>
 
-One can see how our hypothesis are lighter and our theoretical regret as the lowest Upper bound accross the different approaches.
+Our approach stands out with lighter assumptions and the lowest upper bound on theoretical regret across all compared methods.  
 
-These theoretical results are supported by our experiments, with the exception of **PB-MHB** which reached the best performances but **PB-MHB** is more than ten times slower to deliver a recommendation than GRAB and it does not have any theoretical guarantees.
+These findings are further supported by experiments. The only exception is **PB-MHB**, which achieved the best empirical performance but comes with two major drawbacks: it is over ten times slower than GRAB when producing recommendations and lacks theoretical guarantees.  
 
 <div markdown="0" style="text-align:center;">
   <a href="#img-juries">
