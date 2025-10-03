@@ -19,6 +19,8 @@
       link: /Projects/Chess
 - name: 📰📸 Posts
   dropdown:
+    - name: 🚀 Customizing a Vision Language Model (VLM)
+      link: /vlm-custom/
     - name: ♟️ 45th Chess Olympiad
       link: /chess-olympiad/
     - name: ⚖️ Unbalanced Optimal Transport
