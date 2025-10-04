@@ -18,7 +18,159 @@ hero_height: is-small
     </div>
   </a>
 </div>
+---
+<!-- Modality-Swap visualization (inline SVG) -->
+<div style="text-align:center;">
+<div class="modswap-vis" markdown="0">
+  <style>
+    .modswap-vis { max-width: 900px; margin: 1.5rem auto; }
+    .modswap-vis svg { width: 100%; height: auto; display: block; }
 
+    /* Colors (light/dark) */
+    .ms-bg { fill: #ffffff; }
+    .ms-card { fill: #f6f8fb; stroke: #cfd8e3; }
+    .ms-mirror { fill: url(#mirrorGrad); stroke: #9aa4b2; }
+    .ms-accent { stroke: #3b82f6; fill: #3b82f6; }
+    .ms-text { fill: #111827; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Apple Color Emoji","Segoe UI Emoji"; }
+    .ms-ok { fill: #10b981; }
+    .ms-hard { fill: #ef4444; }
+    .ms-vlm { fill: #111827; }
+    .ms-emoji { font-size: 18px; }
+
+    @media (prefers-color-scheme: dark) {
+      .ms-bg { fill: #2c344c; }
+      .ms-card { fill: #121a2e; stroke: #26324a; }
+      .ms-mirror { stroke: #44506a; }
+      .ms-text { fill: #e5e7eb; }
+      .ms-vlm { fill: #e5e7eb; }
+    }
+
+    /* Animation */
+    .ms-sparkle { opacity: 0; animation: twinkle 2.6s infinite 1.2s ease-in-out; }
+    .ms-pulse { transform-origin: center; animation: pulse 2.6s infinite 1.6s ease-in-out; }
+
+    @keyframes flow { 0%{opacity:0} 25%{opacity:1} 50%{opacity:.2} 100%{opacity:0} }
+    @keyframes twinkle { 0%{opacity:0} 40%{opacity:1} 70%{opacity:0} 100%{opacity:0} }
+    @keyframes pulse { 0%{transform:scale(1)} 45%{transform:scale(1.1)} 90%{transform:scale(1)} 100%{transform:scale(1)} }
+
+    /* Respect reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      .ms-sparkle, .ms-pulse { animation: none !important; opacity: 1; }
+    }
+  </style>
+
+  <svg viewBox="0 0 900 360" role="img" aria-labelledby="modswap-title modswap-desc">
+    <title id="modswap-title">Modality-Swap: Turning textual tasks into challenging visual tasks</title>
+    <desc id="modswap-desc">
+      A VLM easily solves a textual task, then a mirror converts the task into a visual format that the same model finds harder.
+    </desc>
+
+    <!-- Background -->
+    <rect class="ms-bg" x="0" y="0" width="900" height="360" rx="16"/>
+
+    <!-- Left: Text task card -->
+    <g transform="translate(40,70)">
+      <rect class="ms-card" x="0" y="0" width="260" height="180" rx="12"/>
+      <text class="ms-text" x="16" y="36" font-weight="700">Textual Task</text>
+      <text class="ms-text" x="16" y="70">“Sum revenues for</text>
+      <text class="ms-text" x="16" y="92">Q2 across regions.”</text>
+
+      <!-- Easy badge -->
+      <g transform="translate(16,130)">
+        <text x="170" y="-30" font-size="20" text-anchor="middle" alignment-baseline="middle">✅</text>
+        <text class="ms-text" x="160" y="-10">Too easy</text>
+      </g>
+
+      <!-- VLM badge -->
+      <g transform="translate(180,-18)" class="ms-pulse">
+      <image href="{{ site.baseurl }}/assets/Modality-Swap/qwen-logo.png"
+       x="100" y="-30"
+       width="80" height="80" />
+
+       <!-- Sunglasses overlay (tweak x/y to fit your logo’s eyes) -->
+        <g transform="translate(100,-30)">
+          <!-- The logo box here is 80×80 starting at (0,0).
+               These lenses are roughly centered horizontally around x≈20..60 and y≈34. -->
+          <!-- Left lens -->
+          <rect x="18" y="32" width="24" height="12" rx="3" ry="3" fill="black"/>
+          <!-- Right lens -->
+          <rect x="46" y="32" width="24" height="12" rx="3" ry="3" fill="black"/>
+          <!-- Bridge -->
+          <rect x="42" y="37" width="6" height="2" fill="black"/>
+          <!-- (Optional) tiny arms for style -->
+          <rect x="10" y="36" width="8" height="2" fill="black"/>
+          <rect x="70" y="36" width="8" height="2" fill="black"/>
+        </g>
+      </g>
+    </g>
+
+    <!-- Center: Mirror -->
+    <defs>
+      <linearGradient id="mirrorGrad" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#e5ecff" />
+        <stop offset="100%" stop-color="#bfd4ff" />
+      </linearGradient>
+    </defs>
+
+    <g transform="translate(350,40)">
+      <!-- Mirror frame -->
+      <rect class="ms-mirror" x="0" y="0" width="200" height="280" rx="16"/>
+      <!-- Mirror diagonal shine -->
+      <path d="M15,30 L185,250" stroke="#ffffff55" stroke-width="6" />
+      <!-- “Swap” label -->
+      <text class="ms-text" x="100" y="305" text-anchor="middle" font-weight="700">Modality Swap</text>
+
+      <!-- Sparkle -->
+      <polygon class="ms-sparkle" points="98,40 104,58 122,64 104,70 98,88 92,70 74,64 92,58"
+               fill="#ffffffaa"/>
+    </g>
+
+    <!-- Right: Visual task card -->
+    <g transform="translate(600,70)">
+      <rect class="ms-card" x="0" y="0" width="260" height="180" rx="12"/>
+      <text class="ms-text" x="16" y="36" font-weight="700">Visual Task</text>
+      <text class="ms-text" x="16" y="70">Same question, now</text>
+      <text class="ms-text" x="16" y="92">but given as an image.</text>
+
+      <!-- Little table icon -->
+      <g transform="translate(16,110)">
+        <rect x="0" y="0" width="110" height="50" rx="6" fill="#dbeafe" stroke="#93c5fd"/>
+        <line x1="36" y1="0" x2="36" y2="50" stroke="#93c5fd"/>
+        <line x1="72" y1="0" x2="72" y2="50" stroke="#93c5fd"/>
+        <line x1="0" y1="25" x2="110" y2="25" stroke="#93c5fd"/>
+      </g>
+
+      <!-- Hard badge -->
+      <g transform="translate(170,130)">
+        <text x="30" y="-30" font-size="32" text-anchor="middle" alignment-baseline="middle">❌</text>
+        <text class="ms-text" x="10" y="-5">Challenging</text>
+      </g>
+
+      <!-- Same VLM (now sweating) -->
+      <g transform="translate(180,-18)" class="ms-pulse">
+        <image href="{{ site.baseurl }}/assets/Modality-Swap/qwen-logo.png"
+          x="100" y="-30"
+          width="80" height="80" />
+        <text class="ms-emoji" x="160" y="-10">💦</text>
+      </g>
+    </g>
+
+    <!-- Arrows -->
+    <g stroke="#94a3b8" stroke-width="2" fill="none" marker-end="url(#arrow)">
+      <defs>
+        <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L6,3 L0,6 z" fill="#94a3b8"/>
+        </marker>
+      </defs>
+      <path d="M300,160 C330,160 330,160 350,160"/>
+      <path d="M550,160 C570,160 570,160 600,160"/>
+    </g>
+  </svg>
+</div>
+<p style="font-style:italic; margin-top:0.5rem; color:#555;">
+  A VLM easily solves a textual task, then a mirror converts the task into a visual format that the same model finds harder.
+</p>
+</div>
 
 ## 💡Abstract
 

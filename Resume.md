@@ -7,6 +7,9 @@ title: 💼Resume
 layout: page
 toc: true
 ---
+<a class="button is-primary" href="{{ site.baseurl }}/assets/documents/main.pdf" target="_blank">
+  📄 View PDF
+</a>
 
 ## 🎓 Education
 

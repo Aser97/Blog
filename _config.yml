@@ -38,7 +38,6 @@ theme: bulma-clean-theme
 permalink: pretty
 markdown: kramdown
 
-
 plugins:
   - jekyll-feed
 

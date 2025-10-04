@@ -6,6 +6,7 @@ date:   2025-07-04
 author: Boammani Aser Lompo
 categories: jekyll update
 permalink: /vlm-custom/
+image: /assets/thumbnails/customize-thumbnail.png
 ---
 
 In this short tutorial, we’ll walk through how to fine-tune a Vision–Language Model (VLM) on a custom dataset.  

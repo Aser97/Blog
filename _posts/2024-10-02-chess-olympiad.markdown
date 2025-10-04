@@ -6,10 +6,12 @@ date:   2024-10-02
 author: Boammani Aser Lompo
 categories: jekyll update
 permalink: /chess-olympiad/
+image: /assets/Olympiads/winners.jpg
 ---
+This year, I had the immense privilege of representing Burkina Faso in the 45th International Chess Olympiad.
+
 The Chess Olympiad is the biggest event in the chess world. Every two years, all 198 member nations of the International Chess Federation (FIDE) gather for a team vs. team competition to crown the strongest chess nation.
 
-This year, I had the immense privilege of representing Burkina Faso in our country’s very first participation.
 
 
 {% include gallery.html id="olympiad-gallery-1" thumb_width="260" %}

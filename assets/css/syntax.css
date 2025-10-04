@@ -1,0 +1,114 @@
+/* =========================================================
+   Monokai Pro — Rouge syntax theme
+   Drop into: assets/css/syntax.css
+   ========================================================= */
+
+/* Base code canvas */
+pre, code, pre.highlight, .highlight pre, .highlight code {
+  background: #2d2a2e;      /* Monokai Pro dark */
+  color: #D4D4D4;           /* softened text */
+  font-family: Menlo, Monaco, Consolas, "JetBrains Mono", "Fira Code", monospace;
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+/* Block code */
+pre, pre.highlight, .highlight pre {
+  position: relative;
+  padding: 1rem 1.25rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 1rem 0 1.5rem;
+}
+
+/* Inline code */
+code, .highlighter-rouge code {
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+/* Remove double bg on wrapper */
+.highlight { background: transparent; }
+
+/* Selection inside code */
+pre ::selection, code ::selection { background: rgba(255,255,255,0.12); }
+
+/* ---------------------------------
+   Token colors (Rouge class map)
+   Palette:
+     Pink/Red   #ff6188
+     Orange     #fc9867
+     Yellow     #ffd866
+     Green      #a9dc76
+     Cyan       #78dce8
+     Purple     #ab9df2
+     Comment    #727072
+     Foreground #f8f8f2
+   --------------------------------- */
+
+/* Comments */
+.highlight .c, .highlight .cm, .highlight .c1, .highlight .cs {
+  color: #727072; font-style: italic;
+}
+
+/* Errors / diffs */
+.highlight .err       { color: #ff6188; background: transparent; }
+.highlight .gd        { color: #ff6188; } /* deleted */
+.highlight .gi        { color: #a9dc76; } /* inserted */
+.highlight .gr, .highlight .gt { color: #ff6188; }
+.highlight .gh, .highlight .gu { color: #ffd866; }
+.highlight .go, .highlight .gp, .highlight .gs { color: #f8f8f2; }
+
+/* Keywords */
+.highlight .k, .highlight .kd, .highlight .kn,
+.highlight .kp, .highlight .kr, .highlight .kt {
+  color: #ff6188; /* if, return, class, import, etc. */
+}
+
+/* Literals / numbers */
+.highlight .l, .highlight .m, .highlight .mb, .highlight .mf,
+.highlight .mh, .highlight .mi, .highlight .il, .highlight .mo {
+  color: #ab9df2; /* numeric literals */
+}
+
+/* Strings */
+.highlight .s, .highlight .sa, .highlight .sb, .highlight .sc,
+.highlight .sd, .highlight .s1, .highlight .s2, .highlight .dl,
+.highlight .se, .highlight .sh, .highlight .si, .highlight .sx,
+.highlight .sr, .highlight .ss {
+  color: #82AAFF;
+}
+
+/* Names / identifiers (neutral by default, softened) */
+.highlight .n, .highlight .na, .highlight .nx, .highlight .py,
+.highlight .no, .highlight .nl, .highlight .nv, .highlight .vc,
+.highlight .vg, .highlight .vi {
+  color: #D4D4D4;
+}
+
+/* Builtins & specials */
+.highlight .nb, .highlight .bp {
+  color: #78dce8; /* e.g., print, len, this, self keyword-ish */
+}
+
+/* Types / classes / tags / attributes */
+.highlight .nc, .highlight .nn, .highlight .nt, .highlight .ni, .highlight .nd, .highlight .na {
+  color: #fc9867; /* orange */
+}
+
+/* Functions / methods */
+.highlight .nf, .highlight .fm {
+  color: #C792EA; /* dark purple for functions */
+}
+
+/* Operators / punctuation */
+.highlight .o, .highlight .ow, .highlight .p {
+  color: #ff6188; /* pink-red */
+}
+
+/* Whitespace (keep subtle) */
+.highlight .w { color: #f8f8f2; }
+
+/* Headings in code blocks (rare) */
+.highlight .gh { color: #ffd866; }

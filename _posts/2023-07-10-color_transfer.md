@@ -6,6 +6,7 @@ date:   2023-07-10
 author: Boammani Aser Lompo
 categories: jekyll update
 permalink: /color-transfer/
+image: /assets/color_notebook_files/color_notebook_15_0.png
 ---
 
 Optimal Transport addresses the problem of moving a mass distribution from one measured space $$(X, \alpha)$$ to another $$(Y, \beta)$$.

@@ -1,0 +1,39 @@
+<div class="card">
+  {% if post.image %}
+    <div class="card-image">
+      <figure class="image is-16by9">
+        <a href="{{ site.baseurl }}{{ post.url }}">
+          <img src="{{ site.baseurl }}{{ post.image }}" alt="{{ post.title }}" style="object-fit: cover; width: 100%; height: 100%;">
+        </a>
+      </figure>
+    </div>
+  {% else %}
+    <header class="card-header">
+      <a class="card-header-title" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+    </header>
+  {% endif %}
+
+  <div class="card-content">
+    <div class="content">
+      {% if post.image %}
+        <a class="title is-4" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+      {% endif %}
+
+      {% if post.summary %}
+        {{ post.summary | markdownify }}
+      {% else %}
+        <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
+      {% endif %}
+    </div>
+
+    <div class="has-text-centered">
+      <a href="{{ site.baseurl }}{{ post.url }}" class="button is-primary">
+        Read more <span class="is-sr-only"> about {{ post.title }}</span>
+      </a>
+    </div>
+  </div>
+
+  <footer class="card-footer">
+    <p class="card-footer-item">Published: {{ post.date | date: '%b %-d, %Y' }}</p>
+  </footer>
+</div>

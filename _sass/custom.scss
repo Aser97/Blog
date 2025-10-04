@@ -126,3 +126,196 @@
   color: #555;        /* optional: dim subtitle color */
   font-style: italic;
 }
+
+/* Base code styling */
+pre, code {
+  background-color: #000000 !important; /* force black */
+  color: #e5e7eb !important;            /* light gray text */
+  border: none;
+  box-shadow: none;
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+/* Block code (```python ... ```) */
+pre {
+  position: relative;   /* so we can position the copy button */
+  padding: 1rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
+/* Inline code (`code`) */
+code {
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  background-color: #000000;
+  font-size: 0.95em;
+}
+
+.copy-btn {
+  position: absolute;
+  top: 0.4rem;
+  right: 0.4rem;
+  width: 18px;           /* smaller box */
+  height: 18px;          /* smaller box */
+  display: grid;
+  place-items: center;
+  background: #3a3840;   /* same background */
+  color: #f8f8f2;
+  border: none;
+  border-radius: 4px;    /* match smaller size */
+  cursor: pointer;
+  opacity: 0.85;
+  transition: opacity 0.2s ease, transform 0.05s ease, background 0.2s ease;
+}
+
+.copy-btn:hover { opacity: 1; }
+.copy-btn:active { transform: translateY(1px); }
+
+/* Focus ring for keyboard users */
+.copy-btn:focus {
+  outline: 2px solid #78dce8;  /* cyan ring */
+  outline-offset: 2px;
+}
+
+/* === Code block sizing (not inline code) === */
+
+/* Rouge can emit div.highlight, figure.highlight, pre.highlight */
+.content pre,
+.content .highlight,
+pre.highlight,
+div.highlight,
+figure.highlight,
+figure.highlight pre,
+figure.highlight pre code,
+.content pre code {
+  font-size: 0.80rem !important;  /* set your size */
+  line-height: 1.45 !important;
+}
+
+/* Keep inline code readable (within paragraphs, lists, tables) */
+.content p code,
+.content li code,
+.content td code,
+.content th code {
+  font-size: 0.95em !important;   /* relative to surrounding text */
+}
+
+/* ===== Light mode tweaks: Light Blue Accent ===== */
+@media (prefers-color-scheme: light) {
+  /* Global background */
+  body, .section {
+    background-color: #fafafa !important; /* modern soft white */
+    color: #1f2937;
+  }
+  /* Card look */
+  .card, .box {
+    background-color: #ffffff;
+    color: #0f172a;
+    border: 1px solid #dbeafe;
+  }
+  .card a, .box a { color: #2563eb; }
+  .card .title, .card .subtitle { color: #0f172a; }
+
+  .hero, .hero.is-primary {
+    background: linear-gradient(135deg, #e0f2fe, #ffffff) !important;
+    border-bottom: 1px solid #bfdbfe;
+  }
+  .hero .title, .hero .subtitle { color: #0f172a !important; }
+
+  .navbar, .navbar.is-primary {
+    background-color: #f0f9ff !important;
+    border-bottom: 1px solid #bfdbfe;
+  }
+  .navbar a, .navbar-item, .navbar-link { color: #0f172a !important; }
+  .navbar a:hover, .navbar-item:hover, .navbar-link:hover {
+    background-color: #dbeafe !important;
+    color: #1e40af !important;
+  }
+
+  /* Active item (remove Bulma blue pill, keep warm neutral) */
+  .navbar-item.is-active,
+  .navbar-link.is-active,
+  .navbar-item:active, .navbar-link:active,
+  .navbar-item:focus,  .navbar-link:focus {
+    background-color: transparent !important; /* no pill */
+    color: #dbeafe !important;                /* warm accent text */
+    box-shadow: none !important;
+  }
+  .card .button.is-link,
+  .card .button.is-primary {
+    background-color: #2563eb !important; /* warm brown accent */
+    color: #ffffff !important;
+    border: none;
+  }
+  .card .button.is-link:hover,
+  .card .button.is-primary:hover {
+    background-color: #dbeafe !important; /* deeper warm tone */
+    color: #ffffff !important;
+  }
+}
+
+/* ===== Dark mode tweaks: OLED Pure Black ===== */
+@media (prefers-color-scheme: dark) {
+  /* CARD / “Latest Posts” readability */
+  .card, .box {
+    background-color: #000000;        /* true black */
+    color: #f5f5f5;                   /* bright white text */
+    border: 1px solid #1f2937;        /* faint border */
+  }
+  .card .title, .card .subtitle,
+  .card a { color: #f5f5f5; }
+  .card .content { color: #d1d5db; }
+  .card a:hover { color: #3b82f6; }   /* vivid blue */
+
+  .hero,
+  .hero.is-primary {
+    background: linear-gradient(180deg, #0a0a0a, #000000) !important;
+    border-bottom: 1px solid #1f2937;
+  }
+  .hero .title, .hero .subtitle {
+    color: #e5e7eb !important;
+  }
+  .navbar, .navbar.is-primary {
+  background-color: #0d1117 !important; /* GitHub dark tone */
+  border-bottom: 1px solid #1f2937;     /* subtle divider */
+  }
+  .navbar a, .navbar-item, .navbar-link {
+    color: #e5e7eb !important;            /* light text */
+  }
+  .navbar a:hover, .navbar-item:hover, .navbar-link:hover {
+    background-color: #161b22 !important; /* soft hover */
+    color: #ffffff !important;
+  }
+
+  /* neutralize active/hover colors on navbar items */
+  .navbar, .navbar.is-primary {
+    background-color: #0d1117 !important;
+    border-bottom: 1px solid #1f2937;
+  }
+
+  .navbar-item,
+  .navbar-link {
+    color: #e5e7eb !important;
+  }
+
+  /* Remove Bulma primary blue on the active item */
+  .navbar-item.is-active,
+  .navbar-link.is-active,
+  .navbar-item:active,
+  .navbar-link:active,
+  .navbar-item:focus,
+  .navbar-link:focus {
+    background-color: transparent !important;
+    color: #ffffff !important;
+    box-shadow: none !important;
+  }
+
+  /* Hover style (subtle) */
+  .navbar-item:hover,
+  .navbar-link:hover {
+    background-color: #161b22 !important;
+    color: #ffffff !important;
+  }
+}
