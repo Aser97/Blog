@@ -6,6 +6,7 @@ title: MSc in NLP | Fundamental Mathematics | Always Learning
 #subtitle: This is the demo site for Bulma Clean Theme
 layout: page
 show_sidebar: true
+hero_compact: true
 ---
 
 <div style="max-width:600px; margin:4rem auto;">

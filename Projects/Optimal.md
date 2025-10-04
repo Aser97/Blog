@@ -7,7 +7,7 @@ title: Optimal Transport
 subtitle: Personal Project, 2022
 gallery: ot-gallery
 toc: true
-hero_height: is-small
+hero_compact: true
 ---
 
 This is a mini project I've made and supervised by Gabriel PEYRE during my MVA Master year. Optimal Transport basically tackles the problem of transferring a mass distribution from one measured space $$(X, \alpha)$$ to another measured $$(Y, \beta)$$.

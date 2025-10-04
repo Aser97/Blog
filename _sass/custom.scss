@@ -120,13 +120,6 @@
 }
 
 
-.subtitle {
-  margin-left: 2em;   /* indent subtitle */
-  font-size: 1.2rem;  /* optional: make subtitle smaller */
-  color: #555;        /* optional: dim subtitle color */
-  font-style: italic;
-}
-
 /* Base code styling */
 pre, code {
   background-color: #000000 !important; /* force black */
@@ -218,12 +211,12 @@ figure.highlight pre code,
   .card a, .box a { color: #2563eb; }
   .card .title, .card .subtitle { color: #0f172a; }
 
-  .hero, .hero.is-primary {
+  .hero:not(.ms-hero),
+  .hero.is-primary:not(.ms-hero) {
     background: linear-gradient(135deg, #e0f2fe, #ffffff) !important;
     border-bottom: 1px solid #bfdbfe;
   }
-  .hero .title, .hero .subtitle { color: #0f172a !important; }
-
+  
   .navbar, .navbar.is-primary {
     background-color: #f0f9ff !important;
     border-bottom: 1px solid #bfdbfe;
@@ -269,13 +262,10 @@ figure.highlight pre code,
   .card .content { color: #d1d5db; }
   .card a:hover { color: #3b82f6; }   /* vivid blue */
 
-  .hero,
-  .hero.is-primary {
+  .hero:not(.ms-hero),
+  .hero.is-primary:not(.ms-hero) {
     background: linear-gradient(180deg, #0a0a0a, #000000) !important;
     border-bottom: 1px solid #1f2937;
-  }
-  .hero .title, .hero .subtitle {
-    color: #e5e7eb !important;
   }
   .navbar, .navbar.is-primary {
   background-color: #0d1117 !important; /* GitHub dark tone */
@@ -318,4 +308,30 @@ figure.highlight pre code,
     background-color: #161b22 !important;
     color: #ffffff !important;
   }
+}
+
+/* --- Modern gradient hero (dark by default) --- */
+.ms-hero {
+  padding: 3rem 0 2.25rem;
+  background:
+    radial-gradient(900px 450px at 15% -10%, #67e8f9 0%, transparent 45%),
+    radial-gradient(900px 450px at 95% 0%,  #a78bfa 0%, transparent 45%),
+    linear-gradient(180deg, #0b1020, #0b1020);
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+.ms-hero .title   { color: #e6edf3; letter-spacing: .2px; }
+.ms-hero .subtitle{ color: #cbd5e1; font-style: italic; margin-left: 2em; }
+.ms-hero.is-compact { padding: 2rem 0 1.25rem; }
+
+/* --- Light-mode override for the same hero --- */
+@media (prefers-color-scheme: light) {
+  .ms-hero {
+    background:
+      radial-gradient(900px 450px at 15% -10%, #c7e9ff 0%, transparent 45%),
+      radial-gradient(900px 450px at 95% 0%,  #e3d5ff 0%, transparent 45%),
+      linear-gradient(180deg, #f7fafc, #ffffff);
+    border-bottom: 1px solid #e5e7eb;
+  }
+  .ms-hero .title   { color: #0f172a; }
+  .ms-hero .subtitle{ color: #334155; }
 }

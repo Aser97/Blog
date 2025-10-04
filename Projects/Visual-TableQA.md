@@ -6,7 +6,7 @@ layout: page
 title: Visual-TableQA, an Open-Domain Benchmark for Reasoning over Table Images
 subtitle: Accepted at NeurIPS 2025 Workshop on Foundations of Reasoning in Language Models
 toc: true
-hero_height: is-small
+hero_compact: true
 ---
 
 ## 📘 Full Article
