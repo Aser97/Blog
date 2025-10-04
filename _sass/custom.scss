@@ -1,114 +1,96 @@
-/* Your custom styles */
+/* ---------- Preview card (thumbnail) ---------- */
 .preview-container {
   position: relative;
-  display: inline-block;
+  display: inline-block;          /* becomes block in columns/gallery */
   cursor: pointer;
   border: 2px solid transparent;
-  transition: transform 0.2s ease, border-color 0.2s ease;
-
-  /* NEW: let this define the visual size */
-  width: 350px;              /* default; override per-instance */
+  transition: transform .2s ease, border-color .2s ease;
+  width: 350px;                   /* default; override per-instance or in columns */
+  box-sizing: border-box;
 }
 
 .preview-container img {
-  /* CHANGE: image fills the container */
   display: block;
   width: 100%;
   height: auto;
-
   border-radius: 8px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Hover ribbon */
 .preview-container .hover-effect {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;               /* now matches container width */
-  background: rgba(0, 0, 0, 0.7);
-  color: white;
+  left: 0; bottom: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.7);
+  color: #fff;
   text-align: center;
   font-size: 14px;
   padding: 5px 0;
   opacity: 0;
-  transition: opacity 0.2s ease;
+  transition: opacity .2s ease;
   border-radius: 0 0 8px 8px;
 }
 
+/* Single hover rule */
 .preview-container:hover {
   transform: scale(1.05);
   border-color: #007bff;
+  z-index: 2;                     /* sit above neighbors when scaled */
 }
+.preview-container:hover .hover-effect { opacity: 1; }
 
-.preview-container:hover .hover-effect {
-  opacity: 1;
-}
-
-/* Make the preview match the column width */
+/* ---------- In Bulma columns / gallery ---------- */
 .columns .preview-container {
+  display: block;                 /* fill the column width */
   width: 100%;
+  margin-bottom: .75rem;          /* spacing between rows */
 }
-
-/* Ensure thumbnail scales with the container */
 .columns .preview-container img {
   width: 100%;
   height: auto;
 }
 
-/* Space below each thumbnail so rows don't feel jammed */
-.columns .preview-container {
-  margin-bottom: 0.75rem;
-}
-
-/* On hover, sit above neighbors so scale doesn't collide */
-.preview-container:hover {
-  z-index: 2;
-}
-
-/* Make preview fill the Bulma ratio box */
+/* ---------- Inside Bulma .image ratio wrapper ---------- */
+/* Fill the ratio box and crop neatly so all tiles align */
 .image .preview-container {
+  display: block;
   width: 100%;
   height: 100%;
 }
-
 .image .preview-container img {
   width: 100%;
   height: 100%;
-  display: block;
-  object-fit: cover; /* keeps uniform height; crop edges if needed */
+  object-fit: cover;
 }
 
-/* Hidden by default */
+/* ---------- Lightbox ---------- */
 .lightbox {
   display: none;
   position: fixed;
   inset: 0;
+  padding: 2rem;
   background: rgba(0,0,0,0.85);
   justify-content: center;
   align-items: center;
   z-index: 9999;
-  padding: 2rem;
 }
+.lightbox:target { display: flex; }
 
-/* Show lightbox when targeted */
-.lightbox:target {
-  display: flex;
-}
-
-/* Close area (click anywhere outside image) */
+/* Click off image to close */
 .lightbox-close {
   position: absolute;
   inset: 0;
   cursor: zoom-out;
 }
 
-/* Image styling */
+/* Enlarged image */
 .lightbox img {
   max-width: 90vw;
   max-height: 90vh;
-  z-index: 10000;
   border-radius: 6px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  z-index: 10000;
 }
 
 .post .content,
@@ -209,14 +191,13 @@ figure.highlight pre code,
     border: 1px solid #dbeafe;
   }
   .card a, .box a { color: #2563eb; }
-  .card .title, .card .subtitle { color: #0f172a; }
 
   .hero:not(.ms-hero),
   .hero.is-primary:not(.ms-hero) {
     background: linear-gradient(135deg, #e0f2fe, #ffffff) !important;
     border-bottom: 1px solid #bfdbfe;
   }
-  
+
   .navbar, .navbar.is-primary {
     background-color: #f0f9ff !important;
     border-bottom: 1px solid #bfdbfe;
@@ -257,8 +238,6 @@ figure.highlight pre code,
     color: #f5f5f5;                   /* bright white text */
     border: 1px solid #1f2937;        /* faint border */
   }
-  .card .title, .card .subtitle,
-  .card a { color: #f5f5f5; }
   .card .content { color: #d1d5db; }
   .card a:hover { color: #3b82f6; }   /* vivid blue */
 
@@ -334,4 +313,58 @@ figure.highlight pre code,
   }
   .ms-hero .title   { color: #0f172a; }
   .ms-hero .subtitle{ color: #334155; }
+}
+
+/* Modern cards */
+.ms-card {
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.ms-card:hover { transform: translateY(-2px); }
+
+/* Thumbnail with overlay title */
+.ms-thumb {
+  position: relative; display: block;
+  aspect-ratio: 16/9; background: #111; overflow: hidden;
+}
+.ms-thumb img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  transition: transform .25s ease; filter: saturate(1.05);
+}
+.ms-card:hover .ms-thumb img { transform: scale(1.02); }
+.ms-thumb::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 35%, rgba(0,0,0,.55) 100%);
+}
+.ms-thumb-title {
+  position: absolute; left: 14px; right: 14px; bottom: 12px;
+  color: #fff; font-weight: 600; line-height: 1.25;
+  text-shadow: 0 2px 6px rgba(0,0,0,.4);
+}
+
+/* Meta row */
+.ms-meta { margin: .25rem 0 1rem; opacity: .8; font-size: .9rem; }
+
+/* Light/Dark subtle shadows */
+@media (prefers-color-scheme: light) {
+  .ms-card { box-shadow: 0 8px 20px rgba(0,0,0,.06); border: 1px solid #eaeaea; }
+}
+@media (prefers-color-scheme: dark) {
+  .ms-card { box-shadow: 0 10px 24px rgba(0,0,0,.35); border: 1px solid rgba(255,255,255,.06); }
+}
+
+.post-title-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 0.75rem;
+  background: rgba(0, 0, 0, 0.5);  /* translucent black strip */
+  color: #fff;
+}
+
+.post-title-overlay .title {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #fff !important;
 }
