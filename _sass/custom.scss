@@ -197,24 +197,6 @@ code {
   .hero:not(.ms-hero) .subtitle {
     color: #0f172a !important;
   }
-
-  /* Navbar (consolidated) */
-  .navbar, .navbar.is-primary {
-    background-color: #f0f9ff !important;
-    border-bottom: 1px solid #bfdbfe;
-  }
-  .navbar a, .navbar-item, .navbar-link { color: #0f172a !important; }
-  .navbar a:hover, .navbar-item:hover, .navbar-link:hover {
-    background-color: #dbeafe !important;
-    color: #1e40af !important;
-  }
-  .navbar-item.is-active, .navbar-link.is-active,
-  .navbar-item:active,    .navbar-link:active,
-  .navbar-item:focus,     .navbar-link:focus {
-    background-color: transparent !important; /* no blue pill */
-    color: #0f172a !important;
-    box-shadow: none !important;
-  }
 }
 
 /* ===== Dark mode tweaks: OLED Pure Black (cleaned) ===== */
@@ -236,28 +218,8 @@ code {
     background: linear-gradient(180deg, #0a0a0a, #000000) !important;
     border-bottom: 1px solid #1f2937;
   }
-
-  /* Navbar (consolidated) */
-  .navbar, .navbar.is-primary {
-    background-color: #0d1117 !important;
-    border-bottom: 1px solid #1f2937;
-  }
-  .navbar a, .navbar-item, .navbar-link {
-    color: #e5e7eb !important;
-  }
-  .navbar-item.is-active,
-  .navbar-link.is-active,
-  .navbar-item:active, .navbar-link:active,
-  .navbar-item:focus,  .navbar-link:focus {
-    background-color: transparent !important;
-    color: #ffffff !important;
-    box-shadow: none !important;
-  }
-  .navbar a:hover, .navbar-item:hover, .navbar-link:hover {
-    background-color: #161b22 !important;
-    color: #ffffff !important;
-  }
 }
+
 /* --- Modern gradient hero (dark by default) --- */
 .ms-hero {
   padding: 3rem 0 2.25rem;
@@ -423,4 +385,144 @@ body {
   font-size: 0.9em;
   padding: .08em .35em;
   border-radius: 4px;
+}
+
+
+/* ===== Step 4 — Navbar polish (works with your existing header.html) ===== */
+
+/* Shared tweaks */
+.navbar {
+  backdrop-filter: saturate(150%) blur(6px);     /* subtle frosted look */
+  -webkit-backdrop-filter: saturate(150%) blur(6px);
+  height: 56px;                                  /* slimmer bar */
+}
+.navbar-brand .navbar-item {
+  padding-top: .5rem; padding-bottom: .5rem;
+}
+.navbar-menu { padding-top: .35rem; padding-bottom: .35rem; }
+
+/* Links: nicer spacing + active underline indicator */
+.navbar-item, .navbar-link {
+  position: relative;
+  padding: .55rem .75rem;
+  transition: color .15s ease, background .15s ease;
+}
+.navbar-item.is-active::after,
+.navbar-link.is-active::after {
+  content: "";
+  position: absolute; left: .6rem; right: .6rem; bottom: .35rem;
+  height: 2px; border-radius: 1px;
+}
+
+/* Light theme */
+@media (prefers-color-scheme: light) {
+  .navbar, .navbar.is-primary {
+    background: rgba(255,255,255,.85) !important;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  .navbar-item, .navbar-link { color: #0f172a !important; }
+  .navbar-item:hover, .navbar-link:hover { background: #eef2ff !important; color: #1e40af !important; }
+  .navbar-item.is-active, .navbar-link.is-active {
+    background: transparent !important; color: #0f172a !important; box-shadow: none !important;
+  }
+  .navbar-item.is-active::after, .navbar-link.is-active::after { background: #2563eb; } /* blue underline */
+}
+
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+  .navbar, .navbar.is-primary {
+    background: rgba(13,17,23,.85) !important;   /* matches your dark canvas */
+    border-bottom: 1px solid #1f2937;
+  }
+  .navbar-item, .navbar-link { color: #e5e7eb !important; }
+  .navbar-item:hover, .navbar-link:hover { background: #161b22 !important; color: #ffffff !important; }
+  .navbar-item.is-active, .navbar-link.is-active {
+    background: transparent !important; color: #e5e7eb !important; box-shadow: none !important;
+  }
+  .navbar-item.is-active::after, .navbar-link.is-active::after { background: #3b82f6; } /* blue underline */
+}
+
+/* Mobile menu spacing (when burger opens) */
+@media (max-width: 1023px) {
+  .navbar-menu { padding: .5rem 0 .75rem; }
+  .navbar-item { padding: .6rem 1rem; }
+}
+
+/* ===== Footer (modern + compact) ===== */
+.ms-footer {
+  padding: 1.25rem 0 1.5rem;
+  border-top: 1px solid;
+}
+.ms-footer .ms-footer-menu { margin-bottom: .75rem; }
+.ms-footer .ms-footer-meta p { margin: 0; opacity: .9; }
+
+/* Polished socials row (targets icons rendered by follow.html) */
+.ms-follow {
+  display: flex;
+  justify-content: center;
+  gap: .5rem;
+  margin: .25rem 0 .5rem;
+}
+.ms-follow a {
+  display: flex;                  /* flex instead of grid */
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  text-decoration: none;
+  border: 1px solid;
+  line-height: 1;                 /* fix vertical offset */
+  font-size: 20px;                /* icon size */
+  transition: transform .12s ease, background .2s ease, color .2s ease;
+}
+.ms-follow a:hover { transform: translateY(-1px); }
+
+/* Ensure icons (FA, SVG, images) sit dead center */
+.ms-follow a i,
+.ms-follow a svg,
+.ms-follow a img {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+.ms-follow .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  line-height: 1;
+}
+.ms-follow .icon .fa,
+.ms-follow .icon .fab,
+.ms-follow .icon .fas {
+  font-size: 20px;
+  line-height: 1;
+}
+
+/* Light theme */
+@media (prefers-color-scheme: light) {
+  .ms-footer { background: #ffffff; border-top-color: #e5e7eb; }
+  .ms-footer a { color: #2563eb; }
+  .ms-footer a:hover { color: #1e40af; }
+  .ms-follow a {
+    background: #ffffff; border-color: #e5e7eb; color: #0f172a;
+  }
+  .ms-follow a:hover {
+    background: #eef2ff; border-color: #c7d2fe; color: #1e40af;
+  }
+}
+
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+  .ms-footer { background: #0d1117; border-top-color: #1f2937; }
+  .ms-footer, .ms-footer a { color: #e5e7eb; }
+  .ms-footer a:hover { color: #93c5fd; }
+  .ms-follow a {
+    background: #0d1117; border-color: #1f2937; color: #e5e7eb;
+  }
+  .ms-follow a:hover {
+    background: #111827; border-color: #334155; color: #93c5fd;
+  }
 }

@@ -1,0 +1,23 @@
+<footer class="footer ms-footer">
+  <div class="container">
+    {% if site.footer_menu %}
+      <div class="columns is-multiline is-mobile ms-footer-menu">
+        {% for item in site.data[site.footer_menu] %}
+          <div class="column has-text-centered is-one-third-mobile is-one-quarter-tablet is-one-fifth-desktop">
+            <a href="{{ item.link | relative_url }}" class="link">{{ item.name }}</a>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    <!-- Socials row (uses follow.html with .ms-follow styles) -->
+    {% include follow.html %}
+
+    <!-- Meta line (optional, remove if you don’t want site.title here) -->
+    {% if site.title %}
+      <div class="content is-small has-text-centered ms-footer-meta">
+        <p>{{ site.title }}</p>
+      </div>
+    {% endif %}
+  </div>
+</footer>
