@@ -96,7 +96,7 @@
 .post .content,
 .page .content,
 .content {
-  max-width: 800px;   /* readable width */
+  max-width: 700px;   /* readable width */
   margin-left: auto;
   margin-right: auto;
 }
@@ -353,7 +353,10 @@ body {
 }
 
 /* Paragraph rhythm */
-.content p { margin: .85rem 0; }
+.content p {
+  line-height: 1.75;
+  margin: 1.1rem 0;
+}
 
 /* Lists */
 .content ul, .content ol { margin: .8rem 0 1rem 1.25rem; }
@@ -446,6 +449,51 @@ body {
 @media (max-width: 1023px) {
   .navbar-menu { padding: .5rem 0 .75rem; }
   .navbar-item { padding: .6rem 1rem; }
+}
+
+/* =========================================================
+   STEP 7 – Modern Typography & Readability
+   ========================================================= */
+
+/* Global text adjustments */
+body {
+  font-family: "Inter", "SF Pro Display", -apple-system, BlinkMacSystemFont,
+               "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.7;
+  letter-spacing: 0.015em;
+}
+
+/* Headings: cleaner hierarchy */
+h1, .title.is-1 { font-size: 2.25rem; font-weight: 700; letter-spacing: -0.01em; }
+h2, .title.is-2 { font-size: 1.75rem; font-weight: 600; letter-spacing: -0.01em; }
+h3, .title.is-3 { font-size: 1.4rem;  font-weight: 600; }
+h4, .title.is-4 { font-size: 1.15rem; font-weight: 500; }
+.subtitle { opacity: 0.9; font-style: italic; }
+
+/* Paragraphs and lists */
+.content p, .content li {
+  color: inherit;
+  font-size: 1.02rem;
+  line-height: 1.75;
+  margin-bottom: 1em;
+}
+
+/* Links (global) */
+a {
+  text-decoration: none;
+  transition: color 0.15s ease, opacity 0.15s ease;
+}
+a:hover { opacity: 0.85; }
+
+/* Smooth scroll */
+html { scroll-behavior: smooth; }
+/* Enforce global font across common Bulma components */
+.title, .subtitle,
+.navbar, .navbar-item, .navbar-link,
+.button, .card, .menu, .tag {
+  font-family: inherit !important;
 }
 
 /* ===== Footer (modern + compact) ===== */
