@@ -154,29 +154,6 @@ code {
   outline-offset: 2px;
 }
 
-/* === Code block sizing (not inline code) === */
-
-/* Rouge can emit div.highlight, figure.highlight, pre.highlight */
-.content pre,
-.content .highlight,
-pre.highlight,
-div.highlight,
-figure.highlight,
-figure.highlight pre,
-figure.highlight pre code,
-.content pre code {
-  font-size: 0.80rem !important;  /* set your size */
-  line-height: 1.45 !important;
-}
-
-/* Keep inline code readable (within paragraphs, lists, tables) */
-.content p code,
-.content li code,
-.content td code,
-.content th code {
-  font-size: 0.95em !important;   /* relative to surrounding text */
-}
-
 /* ===== Light mode tweaks: cleaned ===== */
 @media (prefers-color-scheme: light) {
 
@@ -359,4 +336,91 @@ figure.highlight pre code,
   margin: 0;
   font-size: 1.25rem;
   color: #fff !important;
+}
+
+/* ===== Code block + inline sizing (applies to both themes) ===== */
+
+/* Block code (Rouge emits pre.highlight, figure.highlight, etc.) */
+.content pre,
+.content .highlight,
+pre.highlight,
+div.highlight,
+figure.highlight,
+figure.highlight pre,
+figure.highlight pre code,
+.content pre code {
+  font-size: 0.80rem !important;   /* smaller, easier to scan */
+  line-height: 1.45 !important;
+  font-family: Menlo, Monaco, Consolas, "JetBrains Mono", "Fira Code", monospace;
+}
+
+/* Inline code (within paragraphs, lists, tables) */
+.content p code,
+.content li code,
+.content td code,
+.content th code {
+  font-size: 0.95em !important;    /* relative to surrounding text */
+  padding: 0.08em 0.35em;
+  border-radius: 4px;
+}
+
+/* ===== Global typography & spacing ===== */
+
+/* Base copy (readable on both themes) */
+html { scroll-behavior: smooth; }
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+               "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  line-height: 1.7;
+  letter-spacing: .1px;
+}
+
+/* Content width (doesn't affect hero/cards) */
+.container .content {
+  max-width: 820px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Headings */
+.content h1, .content h2, .content h3 {
+  font-weight: 700;
+  line-height: 1.25;
+  margin-top: 1.6rem;
+  margin-bottom: .6rem;
+}
+
+/* Paragraph rhythm */
+.content p { margin: .85rem 0; }
+
+/* Lists */
+.content ul, .content ol { margin: .8rem 0 1rem 1.25rem; }
+
+/* Links (subtle underline on hover) */
+.content a {
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color .15s ease, border-color .15s ease;
+}
+@media (prefers-color-scheme: light) {
+  .content a:hover { border-color: rgba(37,99,235,.35); }
+}
+@media (prefers-color-scheme: dark) {
+  .content a:hover { border-color: rgba(59,130,246,.45); }
+}
+
+/* Blockquotes */
+.content blockquote {
+  border-left: 3px solid rgba(125, 138, 153, .35);
+  padding-left: 1rem;
+  margin: 1rem 0;
+  font-style: italic;
+  opacity: .95;
+}
+
+/* Code inline (keeps your Monokai blocks) */
+.content code {
+  font-size: 0.9em;
+  padding: .08em .35em;
+  border-radius: 4px;
 }
