@@ -154,6 +154,101 @@ code {
   outline-offset: 2px;
 }
 
+/* --- Home “About” header --- */
+.about-card { margin-bottom: 1.5rem; }
+
+/* === Avatar (clean ring, centered image, no black halo) === */
+.avatar-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: transparent; /* remove black ring */
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+.avatar-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Optional glow for dark mode */
+@media (prefers-color-scheme: dark) {
+  .avatar-hero {
+    border-color: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 4px 14px rgba(59, 130, 246, 0.18);
+  }
+}
+
+/* --- Force-clean the avatar: no ring, no shadow, centered image --- */
+.about-card .avatar-hero,
+.avatar-hero {
+  width: 140px !important;
+  height: 140px !important;
+  border-radius: 9999px !important;
+  overflow: hidden !important;
+
+  /* kill any ring/shadow/background from older rules */
+  border: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+
+  display: grid !important;
+  place-items: center !important;
+}
+
+.about-card .avatar-hero img,
+.avatar-hero img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Button polish for both themes */
+@media (prefers-color-scheme: dark) {
+  .about-card .button.is-link { background-color:#3b82f6; border:0; }
+  .about-card .button.is-link:hover { background-color:#2563eb; }
+  .about-card .button.is-dark.is-outlined { border-color:#334155; color:#e5e7eb; }
+  .about-card .button.is-dark.is-outlined:hover { background:#111827; }
+}
+@media (prefers-color-scheme: light) {
+  .about-card .button.is-link { background-color:#2563eb; border:0; }
+  .about-card .button.is-link:hover { background-color:#1e40af; }
+}
+
+.home-intro {
+  display: flex;
+  align-items: center; /* vertically align image + text */
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+.home-intro img {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border: 2px solid rgba(255,255,255,0.1);
+}
+/* Home intro tuning */
+.home-intro { margin-bottom: 1.25rem; }
+@media (min-width: 1024px) {
+  .home-intro .column.is-narrow { width: 170px; }   /* keeps avatar column compact */
+  .home-intro .title.is-4 { margin-bottom: .3rem; }
+  .home-intro p.is-size-5 { margin-bottom: .4rem; }
+}
+
+
 /* === Thumbnail under TOC (clean, compact, aligned) === */
 .ms-toc .ms-toc-pdf {
   text-align: left;
