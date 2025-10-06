@@ -36,5 +36,12 @@
     {%- include head-scripts.html -%}
     <link rel="stylesheet" href="{{ '/assets/css/syntax.css' | relative_url }}">
     {% include toc-style.html %}
-    {% include analytics.html %}
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2BEZHN43R6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-2BEZHN43R6');
+    </script>
 </head>
