@@ -32,7 +32,7 @@ hero_compact: true
     <!-- New message -->
     <p class="is-size-6" style="margin-top:.75rem; max-width:58ch;">
       <strong>I’m actively seeking opportunities</strong> and open to <strong>research collaborations</strong>.  
-      Don’t hesitate to <a href="mailto:lompoaser9@gmail.com" class="has-text-link">get in touch!</a>
+      Don’t hesitate to <a href="mailto:lompoaser9@gmail.com" class="has-text-link">get in touch</a> or explore my Portfolio!
     </p>
 
     <!-- Buttons -->
