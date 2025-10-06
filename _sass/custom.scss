@@ -154,6 +154,96 @@ code {
   outline-offset: 2px;
 }
 
+/* === Thumbnail under TOC (clean, compact, aligned) === */
+.ms-toc .ms-toc-pdf {
+  text-align: left;
+  margin-top: 0.75rem;
+}
+
+.ms-toc .ms-toc-preview {
+  width: 100px;
+  aspect-ratio: 1 / 1;          /* keeps ratio consistent */
+  margin: 0.5rem 0 0;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid;
+  box-sizing: border-box;
+  position: relative;
+  transition: border-color 0.2s ease;
+}
+
+.ms-toc .ms-toc-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  border-radius: 0;
+}
+
+/* Subtle hover effect (no zoom) */
+.ms-toc .ms-toc-preview .hover-effect {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  text-align: center;
+  font-size: 13px;
+  padding: 4px 0;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.ms-toc .ms-toc-preview:hover .hover-effect { opacity: 1; }
+
+/* Label styling */
+.ms-toc .ms-toc-pdf .menu-label {
+  margin-bottom: 0.35rem;
+  text-align: left;
+}
+
+/* Light/Dark border color */
+@media (prefers-color-scheme: light) {
+  .ms-toc .ms-toc-preview { border-color: #e5e7eb; }
+}
+@media (prefers-color-scheme: dark) {
+  .ms-toc .ms-toc-preview { border-color: #1f2937; }
+}
+
+/* Sticky sidebar (TOC + thumbnail), desktop only */
+@media (min-width: 1024px){
+  .ms-toc{
+    position: sticky;
+    top: 5rem;           /* adjust for your fixed navbar/hero; try 4–6rem */
+    align-self: flex-start;  /* avoid stretching full column height */
+  }
+  .ms-toc .menu{ margin-bottom: 0.75rem; } /* keep a little gap above the thumb */
+}
+
+.ms-toc .ms-toc-preview.circle {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0d1117;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.ms-toc .ms-toc-preview.circle:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.ms-toc .ms-toc-preview.circle img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+}
 /* ===== Light mode tweaks: cleaned ===== */
 @media (prefers-color-scheme: light) {
 
@@ -496,10 +586,11 @@ html { scroll-behavior: smooth; }
   font-family: inherit !important;
 }
 
-/* ===== Footer (modern + compact) ===== */
+/* ===== Footer (modern + compact, emphasized) ===== */
 .ms-footer {
-  padding: 1.25rem 0 1.5rem;
-  border-top: 1px solid;
+  /* slightly taller top padding so the section feels intentional */
+  padding: 1.75rem 0 1.5rem;
+  border-top: 1px solid; /* color set per-theme below */
 }
 .ms-footer .ms-footer-menu { margin-bottom: .75rem; }
 .ms-footer .ms-footer-meta p { margin: 0; opacity: .9; }
@@ -512,7 +603,7 @@ html { scroll-behavior: smooth; }
   margin: .25rem 0 .5rem;
 }
 .ms-follow a {
-  display: flex;                  /* flex instead of grid */
+  display: flex;
   align-items: center;
   justify-content: center;
   width: 42px;
@@ -520,8 +611,8 @@ html { scroll-behavior: smooth; }
   border-radius: 999px;
   text-decoration: none;
   border: 1px solid;
-  line-height: 1;                 /* fix vertical offset */
-  font-size: 20px;                /* icon size */
+  line-height: 1;
+  font-size: 20px;
   transition: transform .12s ease, background .2s ease, color .2s ease;
 }
 .ms-follow a:hover { transform: translateY(-1px); }
@@ -549,7 +640,7 @@ html { scroll-behavior: smooth; }
   line-height: 1;
 }
 
-/* Light theme */
+/* === Light theme (unchanged look) === */
 @media (prefers-color-scheme: light) {
   .ms-footer { background: #ffffff; border-top-color: #e5e7eb; }
   .ms-footer a { color: #2563eb; }
@@ -562,15 +653,35 @@ html { scroll-behavior: smooth; }
   }
 }
 
-/* Dark theme */
+/* === Dark theme (add emphasis) === */
 @media (prefers-color-scheme: dark) {
-  .ms-footer { background: #0d1117; border-top-color: #1f2937; }
+  .ms-footer {
+    /* soft separation + depth */
+    background: linear-gradient(180deg, #0d1117 0%, #111827 100%);
+    border-top-color: rgba(255,255,255,0.08);
+    box-shadow: 0 -2px 15px rgba(255,255,255,0.05);
+  }
   .ms-footer, .ms-footer a { color: #e5e7eb; }
   .ms-footer a:hover { color: #93c5fd; }
+
   .ms-follow a {
     background: #0d1117; border-color: #1f2937; color: #e5e7eb;
   }
   .ms-follow a:hover {
     background: #111827; border-color: #334155; color: #93c5fd;
+  }
+
+  /* subtle glow so the row doesn't get missed */
+  .ms-follow {
+    filter: drop-shadow(0 0 10px rgba(59,130,246,0.15));
+  }
+}
+
+@media (min-width: 1024px) {
+  .ms-footer {
+    position: sticky;
+    bottom: 0;
+    z-index: 30;
+    backdrop-filter: saturate(120%) blur(8px);
   }
 }

@@ -37,28 +37,116 @@
         <section class="section">
             <div class="container">
                 <div class="columns is-multiline">
-                    {% if page.menubar_toc %}
-                        <div class="column is-4-desktop is-4-tablet">
-                            {% assign contentsTitle = page.toc_title | default: 'Contents' %}
-                            {% include toc.html html=content class='menu-list' h_min=2 h_max=3 contents_title=contentsTitle %}
+                  {% if page.menubar_toc %}
+                    <div class="column is-12-mobile is-4-tablet is-3-desktop ms-toc">
+                      {% assign contentsTitle = page.toc_title | default: 'Contents' %}
+                      {% include toc.html html=content class='menu-list' h_min=2 h_max=3 contents_title=contentsTitle %}
+
+                      {%- comment -%} --- Dynamic resource thumbnails (one or many) --- {%- endcomment -%}
+                      {% if page.sidebar_docs %}
+                        <div class="ms-toc-docs">
+                          <p class="menu-label">{{ page.sidebar_docs_label | default: '📘 Resources' }}</p>
+
+                          {% for doc in page.sidebar_docs %}
+                            {%- assign href = doc.url -%}
+                            {%- if href and href != '' and href contains '://' -%}
+                              {%- assign final_href = href -%}
+                            {%- else -%}
+                              {%- assign final_href = href | relative_url -%}
+                            {%- endif -%}
+
+                            {%- assign thumb = doc.thumb | default: '/assets/thumbnails/default-doc.png' -%}
+                            {%- if thumb and thumb != '' and thumb contains '://' -%}
+                              {%- assign final_thumb = thumb -%}
+                            {%- else -%}
+                              {%- assign final_thumb = thumb | relative_url -%}
+                            {%- endif -%}
+
+                            {%- assign is_circle = false -%}
+                            {%- if final_thumb contains 'jupyter' or final_thumb contains 'github' -%}
+                              {%- assign is_circle = true -%}
+                            {%- endif -%}
+
+                            <a href="{{ final_href }}" target="_blank" class="ms-toc-doc">
+                              <div class="preview-container ms-toc-preview{% if is_circle %} circle{% endif %}">
+                                <img src="{{ final_thumb }}" alt="{{ doc.label | default: 'Document' }}">
+                                <div class="hover-effect">Open</div>
+                              </div>
+                              {% if doc.label %}
+                                <div class="is-size-7" style="margin-top:.35rem">{{ doc.label }}</div>
+                              {% endif %}
+                            </a>
+                          {% endfor %}
                         </div>
-                    {% elsif page.menubar %}
-                        <div class="column is-4-desktop is-4-tablet">
-                            {% include menubar.html %}
-                        </div>
-                    {% endif %}
-                    <div class="column {{ content_width }}">
+                      {% else %}
+                        {%- assign sb_link  = page.sidebar_link | default: page.pdf_url | default: page.hero_link -%}
+                        {%- assign sb_label = page.sidebar_label -%}
+
+                        {% if sb_label == nil or sb_label == '' %}
+                          {% if sb_link %}
+                            {% assign ext = sb_link | split:'?' | first | split:'#' | first | split:'.' | last | downcase %}
+                            {% case ext %}
+                              {% when 'pdf' %}{% assign sb_label = '📘 PDF' %}
+                              {% when 'ppt','pptx','key' %}{% assign sb_label = '📊 Slides' %}
+                              {% when 'ipynb' %}{% assign sb_label = '📓 Notebook' %}
+                              {% when 'zip','tar','gz','tgz' %}{% assign sb_label = '📦 Download' %}
+                              {% when 'md' %}{% assign sb_label = '📝 Document' %}
+                              {% else %}{% assign sb_label = '🔗 Resource' %}
+                            {% endcase %}
+                          {% else %}
+                            {% assign sb_label = '🔗 Resource' %}
+                          {% endif %}
+                        {% endif %}
+
+                        {% if sb_link %}
+                          {% assign href = sb_link %}
+                          {% if href and href != '' and href contains '://' %}
+                            {% assign final_href = href %}
+                          {% else %}
+                            {% assign final_href = href | relative_url %}
+                          {% endif %}
+
+                          {% assign thumb_path = page.sidebar_thumb | default: '/assets/thumbnails/default-doc.png' %}
+                          {% if thumb_path and thumb_path != '' and thumb_path contains '://' %}
+                            {% assign final_thumb = thumb_path %}
+                          {% else %}
+                            {% assign final_thumb = thumb_path | relative_url %}
+                          {% endif %}
+
+                          {% assign is_circle = false %}
+                          {% if final_thumb contains 'jupyter' or final_thumb contains 'github' %}
+                            {% assign is_circle = true %}
+                          {% endif %}
+
+                          <div class="ms-toc-pdf">
+                            <p class="menu-label">{{ sb_label }}</p>
+                            <a href="{{ final_href }}" target="_blank">
+                              <div class="preview-container ms-toc-preview{% if is_circle %} circle{% endif %}">
+                                <img src="{{ final_thumb }}" alt="Open {{ sb_label | strip_html }}">
+                                <div class="hover-effect">Click to view</div>
+                              </div>
+                            </a>
+                          </div>
+                        {% endif %}
+                      {% endif %}
+                    </div>
+                  {% elsif page.menubar %}
+                    <div class="column is-4-desktop is-4-tablet">
+                      {% include menubar.html %}
+                    </div>
+                  {% endif %}
+                  <div class="column {{ content_width }}">
                         {% include tabs.html %}
                         {% include showcase.html %}
                         {% include sponsors.html %}
                         {% include gallery.html %}
                         {{ content }}
-                    </div>
-                    {% if site.posts and page.show_sidebar %}
+                  </div>
+                  {% if site.posts and page.show_sidebar %}
                         <div class="column is-4-desktop is-4-tablet">
                             {% include latest-posts.html %}
                         </div>
-                    {% endif %}
+                  {% endif %}
                 </div>
             </div>
         </section>

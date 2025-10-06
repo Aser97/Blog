@@ -1,0 +1,48 @@
+<style>
+/* === Global TOC polish (works with toc: true) === */
+
+.menubar .menu,
+.content .menu {
+  border-radius: 10px;
+  padding: .75rem .9rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,.25);
+}
+
+.menu-label {
+  font-weight: 700;
+  letter-spacing: .02em;
+  margin-bottom: .35rem;
+}
+
+.menu-list { margin: 0; }
+.menu-list > li > a {
+  display: block;
+  padding: .28rem 0;
+  line-height: 1.35;
+  opacity: .95;
+}
+
+.menu-list li ul {
+  margin: .15rem 0 .2rem .85rem;
+  border-left: 1px dashed rgba(128,128,128,.35);
+  padding-left: .75rem;
+}
+
+@media (min-width: 1024px) {
+  .menubar .menu { position: sticky; top: 1rem; }
+}
+
+@media (prefers-color-scheme: light) {
+  .menubar .menu, .content .menu {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .menubar .menu, .content .menu {
+    background: #0f1625;
+    border: 1px solid #1f2937;
+  }
+  .menu-list > li > a { color: #e5e7eb; }
+}
+</style>

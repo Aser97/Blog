@@ -5,19 +5,17 @@
 layout: page
 title: Visual-TableQA, an Open-Domain Benchmark for Reasoning over Table Images
 subtitle: Accepted at NeurIPS 2025 Workshop on Foundations of Reasoning in Language Models
-toc: true
+menubar_toc: true
 hero_compact: true
+sidebar_docs_label: "📘 Resources"
+sidebar_docs:
+  - label: "GITHUB"
+    url: https://github.com/AI-4-Everyone/Visual-TableQA-v2
+    thumb: /assets/thumbnails/github_thumb.svg
+  - label: "FULL ARTICLE"
+    url: https://arxiv.org/pdf/2509.07966
+    thumb: /assets/thumbnails/Visual-TableQA_thumbnail.png
 ---
-
-## 📘 Full Article
-<div markdown="0">
-  <a href="https://arxiv.org/pdf/2509.07966">
-    <div class="preview-container" style="width: 150px;">
-      <img src="{{ site.baseurl }}/assets/thumbnails/Visual-TableQA_thumbnail.png" alt="Preview of the document">
-      <div class="hover-effect">Click to view</div>
-    </div>
-  </a>
-</div>
 
 ## 💡Abstract
 
@@ -34,12 +32,11 @@ The full pipeline and resources are publicly available in our [GitHub repository
 ## 📊 Results  
 Below is a sample of tables and QA pairs generated through our pipeline:  
 
-<div markdown="0" style="text-align:center;">
+<div markdown="0" style="text-align:center; width: 570px;">
   <a href="#img-sample">
     <div class="preview-container" style="display:inline-block;">
       <img src="{{ site.baseurl }}/assets/Visual-TableQA/sample.png"
-           alt="Preview of the document"
-           style="display:block; margin:0 auto; float:none; max-width:100%; height:auto;">
+           alt="Preview of the document">
       <div class="hover-effect">Click to view</div>
     </div>
   </a>
@@ -75,9 +72,6 @@ The analysis shows varying levels of consistency across juries. **GPT-4.1** stan
 ## 🚀 Application  
 A natural next step for this dataset is to **fine-tune VLMs** to strengthen their reasoning abilities.  
 This direction is explored in a follow-up project, which you can find [here]({{"Projects/Modality-Swap"| relative_url}}).
-
-## 🐙 Github Repository
-All the codes and analysis of the dataset are provided in our **[Github Repository](https://github.com/AI-4-Everyone/Visual-TableQA-v2)**
 
 ## 📚 Citation
 

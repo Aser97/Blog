@@ -5,19 +5,17 @@
 layout: page
 title: Parametric Graph for Unimodal Ranking Bandit
 subtitle: Accepted at ICML 2021.
-toc: true
+menubar_toc: true
 hero_compact: true
+sidebar_docs_label: "📘 Resources"
+sidebar_docs:
+  - label: "GITHUB"
+    url: https://github.com/gaudel/ranking_bandits
+    thumb: /assets/thumbnails/github_thumb.svg
+  - label: "FULL ARTICLE"
+    url: https://proceedings.mlr.press/v139/gauthier21a
+    thumb: /assets/thumbnails/MAB_thumbnail.png
 ---
-
-## 📘Full Article
-<div markdown="0">
-  <a href="https://proceedings.mlr.press/v139/gauthier21a">
-    <div class="preview-container" style="width: 170px;">
-      <img src="{{ site.baseurl }}/assets/thumbnails/MAB_thumbnail.png" alt="Preview of the document">
-      <div class="hover-effect">Click to view</div>
-    </div>
-  </a>
-</div>
 
 ## 💡Abstract
 
@@ -64,9 +62,6 @@ These findings are further supported by experiments. The only exception is **PB-
   <a href="#!" class="lightbox-close"></a>
   <img src="{{ site.baseurl }}/assets/MAB/results-2.png" alt="Full-size preview">
 </div>
-
-## 🐙 Github Repository
-All the codes and data are provided in our **[Github Repository](https://github.com/gaudel/ranking_bandits)**
 
 
 ## 📚 Citation

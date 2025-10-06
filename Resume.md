@@ -5,75 +5,42 @@
 title: 💼Resume
 #subtitle: This is the demo site for Bulma Clean Theme
 layout: page
-toc: true
+menubar_toc: true
+hero_compact: true
+sidebar_link: /assets/documents/main.pdf
+sidebar_thumb: /assets/thumbnails/resume_thumbnail.png
+sidebar_label: 📄 Full Resume
 ---
-<a class="button is-primary" href="{{ site.baseurl }}/assets/documents/main.pdf" target="_blank">
-  📄 View PDF
-</a>
 
 ## 🎓 Education
-
-- **2023-Present** Machine Learning Master of Research
-**MILA/ETS, Montréal**
-
-- **2021-2022** Master Maths Vision Apprentissage
-**Ecole Normale Supérieure, Paris-Saclay**
-
-- **2019-2021** Master of Fundamental Mathematics / Agrégation de Mathématiques
-**Ecole Normale Supérieure, Rennes**
-
+- **2023–Present** — Machine Learning Master of Research, **MILA/ETS, Montréal**
+- **2021–2022** — Master Maths Vision Apprentissage, **ENS Paris-Saclay**
+- **2019–2021** — Master of Fundamental Mathematics / **Agrégation de Mathématiques**, **ENS Rennes**
 
 ## 📄 Research
-- **Boammani Aser Lompo, Marc Haraoui**
-  *MODALITY-SWAP DISTILLATION, Rendering Textual Reasoning into Visual Supervision.* Under review as a conference paper at [ICLR 2026]({{ site.baseurl }}/assets/documents/Visual_TableQA_ICLR_2026.pdf)
-- **Boammani Aser Lompo, Marc Haraoui**
-  *Visual-TableQA: Open-Domain Benchmark for Reasoning over Table Images.* [NeurIPS 2025 Workshop on Foundations of Reasoning in Language Models](https://arxiv.org/pdf/2509.07966)
+- **Boammani Aser Lompo, Marc Haraoui**  
+  *MODALITY-SWAP DISTILLATION: Rendering Textual Reasoning into Visual Supervision.*  
+  Under review at **ICLR 2026** — [PDF]({{ site.baseurl }}/assets/documents/Visual_TableQA_ICLR_2026.pdf)
+- **Boammani Aser Lompo, Marc Haraoui**  
+  *Visual-TableQA: Open-Domain Benchmark for Reasoning over Table Images.*  
+  **NeurIPS 2025** Workshop on Foundations of Reasoning in LMs — [arXiv](https://arxiv.org/pdf/2509.07966)
 - **Boammani Aser Lompo, Thanh-Dung Le, Philippe Jouvet, Rita Noumeir**  
-  *Multi-objective Representation for Numbers in Clinical Narratives: A CamemBERT-Bio-Based Alternative to Large-Scale LLMs.* [CoRR 2024](https://doi.org/10.48550/arXiv.2405.18448)
-- **Camille-Sovanneary Gauthier, Romaric Gaudel, Elisa Fromont, Boammani Aser Lompo.**  
-  *Parametric Graph for Unimodal Ranking Bandit.* [ICML 2021](https://hal.archives-ouvertes.fr/hal-03256621/)
+  *Multi-objective Representation for Numbers in Clinical Narratives: A CamemBERT-Bio-Based Alternative to Large-Scale LLMs.*  **CoRR 2024** — [doi](https://doi.org/10.48550/arXiv.2405.18448)
+- **Camille-Sovanneary Gauthier, Romaric Gaudel, Elisa Fromont, Boammani Aser Lompo**  
+  *Parametric Graph for Unimodal Ranking Bandit.* **ICML 2021** — [HAL](https://hal.archives-ouvertes.fr/hal-03256621/)
 
-- #### Reviewer for ICCV 2023, CVPR 2026, and ICLR 2026
----
+- **Reviewer:** ICCV 2023 • CVPR 2026 • ICLR 2026
 
-## 🎯Interests  
-- Applied Mathematics
-- AI/ML (Reasoning, Foundational models, Reinforcement Learning)
-- AI Fairness
+## 🎯 Interests
+- Applied Mathematics, AI/ML (Reasoning, Foundation Models, Reinforcement Learning), AI Fairness
 
-## 💼Internships
+## 💼 Internships
+- **CREST (ENSAI, Rennes) — 2021**  
+  *Unimodal Bandits for Ranking Systems* (Recommenders, MAB, Learning to Rank)  . **Supervisor:** [Romaric Gaudel](https://scholar.google.fr/citations?user=wD65M6kAAAAJ)
+- **COMETE Lab (Inria/École Polytechnique, Paris) — 2020**  
+  *Measuring privacy of cryptographic systems; optimal privacy properties*. **Supervisor:** [Catuscia Palamidessi](https://scholar.google.fr/citations?user=OOgAyqgAAAAJ)
 
-- Department of Statistics at [CREST](https://crest.science/) - **ENSAI, Rennes (2021)**  
-  - **Project:** Unimodal Bandits for ranking systems(Recommender systems, Multi-Armed Bandits, Learning to rank, Unimodal Bandits)
-  - **Supervisor:** [Romaric Gaudel](https://scholar.google.fr/citations?user=wD65M6kAAAAJ&hl=fr&oi=sra)
-
-- Research [COMETE Lab](https://www.inria.fr/fr/comete) - **INRIA, Polytechnique, Paris (2020)**  
-  - **Project:** Measuring privacy of cryptographic systems and studying the properties of optimal-privacy systems  
-  - **Supervisor:** [Catuscia Palamidessi](https://scholar.google.fr/citations?user=OOgAyqgAAAAJ&hl=fr&oi=sra)
-
-- Programming - **[SOBATEN](https://www.sobaten.com/), Paris (2018)**  
-  - **Project:** Designed an Enterprise Resource Planning (ERP) system for a 100 employees company  
-  - **Supervisor:** Cedric Grondin (cgrondin@sobaten.com)
-
----
-
-## 🌟Distinctions  
-- **Best Oral Presentation**, 91e Congrès de l'Acfas au CHU Sainte-Justine, CHU Sainte Justine, Canada (2024)
-- **Scholarship:** Recipient of the R-SADC 2023-2024 research grant (23k)
-- **Scholarship:** French Government Excellence Grant (50k)
-- **Math Achievements:**
-  - Honourable Mention at the International Mathematics Olympiad (**IMO**)(2014, Cape Town)
-  - Gold Medal at the Pan-African Mathematics Olympiad (2015, Abuja)  
-  - Winner of the national Math contest (2015, Burkina Faso)  
-
-
----
-
-## 🇬🇧 🇫🇷Languages  
-
-- **English:** Fluent
-- **French:** Native  
-
-## 🌍 Hobbies
-- Chess: I represented Burkina Faso at the [45th International Chess Olympiad in Budapest]({% post_url 2024-10-02-chess-olympiad %})
-- Travelling and Hiking
+## 🌟 Distinctions
+- **Best Oral Presentation**, 91e Congrès de l’Acfas (2024)
+- **Scholarships:** R-SADC research grant (23k), French Government Excellence Grant (50k)
+- **Math:** IMO Honourable Mention (2014) • PAMO Gold (2015) • National winner (Burkina Faso, 2015)

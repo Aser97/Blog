@@ -7,6 +7,16 @@ author: Boammani Aser Lompo
 categories: jekyll update
 permalink: /color-transfer/
 image: /assets/color_notebook_files/color_notebook_15_0.png
+menubar_toc: true
+hero_compact: true
+sidebar_docs_label: "📘 Resources"
+sidebar_docs:
+  - label: "NOTEBOOK"
+    url: https://github.com/Aser97/Optimal-Transport/blob/main/color_transfer_OT.ipynb
+    thumb: /assets/thumbnails/jupyter_thumbnail.svg
+  - label: "GITHUB"
+    url: https://github.com/Aser97/Optimal-Transport.git
+    thumb: /assets/thumbnails/github_thumb.svg
 ---
 
 Optimal Transport addresses the problem of moving a mass distribution from one measured space $$(X, \alpha)$$ to another $$(Y, \beta)$$.
@@ -268,7 +278,7 @@ plt.savefig('example23.PNG')
 
 <div markdown="0" style="text-align:center;">
   <a href="#img-output">
-    <div class="preview-container" style="width: 450px;">
+    <div class="preview-container" style="display:inline-block; width: 450px;">
       <img src="{{ site.baseurl }}/assets/color_notebook_files/color_notebook_15_0.png"
            alt="Preview of the document">
       <div class="hover-effect">Click to view</div>

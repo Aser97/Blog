@@ -7,6 +7,7 @@ author: Boammani Aser Lompo
 categories: jekyll update
 permalink: /chess-olympiad/
 image: /assets/Olympiads/winners.jpg
+hero_compact: true
 ---
 This year, I had the immense privilege of representing Burkina Faso in the 45th International Chess Olympiad.
 

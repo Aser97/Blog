@@ -6,37 +6,25 @@ layout: page
 title: Reinforcement Learning for Chess
 subtitle: Personal Coding Project, 2021
 gallery: chess-gallery
-toc: true
+menubar_toc: true
 hero_compact: true
+sidebar_docs_label: "📘 Resources"
+sidebar_docs:
+  - label: "GITHUB"
+    url: https://github.com/Aser97/Chess.git
+    thumb: /assets/thumbnails/github_thumb.svg
+  - label: "SARSA"
+    url: https://arxiv.org/pdf/1902.02234
+    thumb: /assets/thumbnails/SARSA_thumbnail.PNG
+  - label: "RL VIA MONTE CARLO"
+    url: https://arxiv.org/pdf/2206.12674
+    thumb: /assets/thumbnails/MC_thumbnail.PNG
 ---
 
 
 This project implements SARSA and Monte Carlo reinforcement learning algorithms to approximate an optimal policy for playing chess against an opponent.
 
-## 💡Theoretical Background
-For a deeper understanding of the algorithms used, refer to the following research papers:
-
-<div style="display:flex; justify-content:center; gap:20px;" markdown="0">
-
-  <a href="https://arxiv.org/pdf/1902.02234">
-    <div class="preview-container" style="width: 160px;">
-      <img src="{{ site.baseurl }}/assets/thumbnails/SARSA_thumbnail.PNG"
-           alt="Preview of the document">
-      <div class="hover-effect">Click to view</div>
-    </div>
-  </a>
-
-  <a href="https://arxiv.org/pdf/2206.12674">
-    <div class="preview-container" style="width: 200px;">
-      <img src="{{ site.baseurl }}/assets/thumbnails/MC_thumbnail.PNG"
-           alt="Preview of the document">
-      <div class="hover-effect">Click to view</div>
-    </div>
-  </a>
-
-</div>
-
-## 🐙 Github Repository
+## 🐙 Project Details
 This project comes with a ready-to-run executable, primarily developed for **macOs** in C++, but it should be compatible with any **Unix**-based system.
 The full code is on my [Github Repository](https://github.com/Aser97/Chess.git)
 

@@ -5,20 +5,17 @@
 layout: page
 title: Multi-objective Representation for Numbers in Clinical Narratives
 subtitle: Submitted at CoRR 2024.
-toc: true
+menubar_toc: true
 hero_compact: true
+sidebar_docs_label: "📘 Resources"
+sidebar_docs:
+  - label: "GITHUB"
+    url: https://github.com/sadc-lab/multiobjective_token_representation
+    thumb: /assets/thumbnails/github_thumb.svg
+  - label: "FULL ARTICLE"
+    url: https://arxiv.org/abs/2405.18448
+    thumb: /assets/thumbnails/Lesa_Xval_thumbnail.png
 ---
-
-## 📘 Full Article
-<div markdown="0">
-  <a href="https://arxiv.org/abs/2405.18448">
-    <div class="preview-container" style="width: 170px;">
-      <img src="{{ site.baseurl }}/assets/thumbnails/Lesa_Xval_thumbnail.png" alt="Preview of the document">
-      <div class="hover-effect">Click to view</div>
-    </div>
-  </a>
-</div>
-
 
 ## 💡 Abstract
 
@@ -69,10 +66,6 @@ The results are highly encouraging: our model achieves performance comparable to
   <a href="#!" class="lightbox-close"></a>
   <img src="{{ site.baseurl }}/assets/LESA/results.png" alt="Full-size preview">
 </div>
-
-## 🐙 Github Repository
-All the codes and analysis of the dataset are provided in our **[Github Repository](https://github.com/sadc-lab/multiobjective_token_representation)**
-
 
 ## 📚 Citation
 

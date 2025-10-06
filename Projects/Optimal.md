@@ -6,8 +6,16 @@ layout: page
 title: Optimal Transport
 subtitle: Personal Project, 2022
 gallery: ot-gallery
-toc: true
+menubar_toc: true
 hero_compact: true
+sidebar_docs_label: "📘 Resources"
+sidebar_docs:
+  - label: "GITHUB"
+    url: https://github.com/Aser97/Optimal-Transport.git
+    thumb: /assets/thumbnails/github_thumb.svg
+  - label: "FULL ARTICLE"
+    url: /assets/documents/OT project.pdf
+    thumb: /assets/thumbnails/ot_thumbnail.PNG
 ---
 
 This is a mini project I've made and supervised by Gabriel PEYRE during my MVA Master year. Optimal Transport basically tackles the problem of transferring a mass distribution from one measured space $$(X, \alpha)$$ to another measured $$(Y, \beta)$$.
@@ -28,17 +36,6 @@ This is a mini project I've made and supervised by Gabriel PEYRE during my MVA M
 </div>
 [Source](https://www.cnblogs.com/liuzhen1995/p/14524932.html#a6)
 
-## 📘Full Article
-
-<div markdown="0">
-  <a href="{{ site.baseurl }}/assets/documents/OT project.pdf">
-    <div class="preview-container" style="width: 140px;">
-      <img src="{{ site.baseurl }}/assets/thumbnails/ot_thumbnail.PNG" alt="Preview of the document">
-      <div class="hover-effect">Click to view</div>
-    </div>
-  </a>
-</div>
-
 ## 💡Abstract
 The goal of this presentation is to study the optimal transport problem in a context where the initial and target distributions do not have the same mass.
 
@@ -47,8 +44,8 @@ The Kantorovich formulation of the Optimal Transport problem is as follows: Supp
 However, this formulation cannot be solved when α and β are not probability measures of the same mass. This study focuses on addressing this issue. We will introduce a more general formulation of the Optimal Transport problem that can handle this case and propose a generalization of the Sinkhorn algorithm to solve it. Additionally, we will demonstrate how this algorithm applies to the Wasserstein barycenter problem and present several illustrations showcasing its performance on different problems. This work follows [Chizat et al., 2016](https://arxiv.org/abs/1607.05816).
 
 
-## 🐙 Github Repository
+## 🐙 A Nice Application
 
-I applied the algorithm presented in the article in the case of [color transfer between two images]({% post_url 2023-07-10-color_transfer %}) (Figures above). The goal is to transfer the color distribution from one image to the other. The full code source is available on this [github repository](https://github.com/Aser97/Optimal-Transport.git)
+I applied the algorithm presented in the article in the case of [color transfer between two images]({% post_url 2023-07-10-color_transfer %}) (Figures above). The goal is to transfer the color distribution from one image to the other.
 
 A few illustrations can be found above.

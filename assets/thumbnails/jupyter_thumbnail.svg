@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Jupyter icon">
+  <!-- Orange orbital arcs -->
+  <path d="M32 96 A96 60 0 0 1 224 96" fill="none" stroke="#F37726" stroke-width="28" stroke-linecap="round"/>
+  <path d="M32 160 A96 60 0 0 0 224 160" fill="none" stroke="#F37726" stroke-width="28" stroke-linecap="round"/>
+
+  <!-- Grey orbiting dots -->
+  <circle cx="58" cy="30" r="10" fill="#9E9E9E"/>
+  <circle cx="198" cy="24" r="8"  fill="#9E9E9E"/>
+  <circle cx="230" cy="128" r="9"  fill="#9E9E9E"/>
+  <circle cx="56" cy="226" r="9"  fill="#9E9E9E"/>
+</svg>

@@ -7,6 +7,10 @@ author: Boammani Aser Lompo
 categories: jekyll update
 permalink: /vlm-custom/
 image: /assets/thumbnails/customize-thumbnail.png
+menubar_toc: true
+hero_compact: true
+sidebar_link: https://github.com/AI-4-Everyone/Visual-TableQA-v2/blob/main/Finetuning/QwenVL%20and%20LLaVA/SFT_QwenVL.ipynb
+sidebar_thumb: /assets/thumbnails/jupyter_thumbnail.svg
 ---
 
 In this short tutorial, we’ll walk through how to fine-tune a Vision–Language Model (VLM) on a custom dataset.  

@@ -5,20 +5,18 @@
 layout: page
 title: MODALITY-SWAP DISTILLATION, Rendering Textual Reasoning into Visual Supervision
 subtitle: Under review as a conference paper at ICLR 2026
-toc: true
+menubar_toc: true
 hero_compact: true
+sidebar_docs_label: "📘 Resources"
+sidebar_docs:
+  - label: "GITHUB"
+    url: https://github.com/AI-4-Everyone/Visual-TableQA-v2
+    thumb: /assets/thumbnails/github_thumb.svg
+  - label: "FULL ARTICLE"
+    url: /assets/documents/Visual_TableQA_ICLR_2026.pdf
+    thumb: /assets/thumbnails/Modality-Swap_thumbnail.png
 ---
 
-## 📘 Full Article
-<div markdown="0">
-  <a href="{{ site.baseurl }}/assets/documents/Visual_TableQA_ICLR_2026.pdf">
-    <div class="preview-container" style="width: 170px;">
-      <img src="{{ site.baseurl }}/assets/thumbnails/Modality-Swap_thumbnail.png" alt="Preview of the document">
-      <div class="hover-effect">Click to view</div>
-    </div>
-  </a>
-</div>
----
 <!-- Modality-Swap visualization (inline SVG) -->
 <div style="text-align:center;">
 <div class="modswap-vis" markdown="0">
@@ -240,9 +238,6 @@ We also report the **LLM jury agreement** over dataset quality in the figure bel
 
 This Table shows consistently strong jury agreement across all models for benchmark evaluations, with no notable divergence between proprietary and open-source LLMs. This can be attributed to the relatively simpler nature of the task (semantic comparison between model predictions
 and ground truth).
-
-## 🐙 Github Repository
-All the codes and analysis of the dataset are provided in our **[Github Repository](https://github.com/AI-4-Everyone/Visual-TableQA-v2)**
 
 
 ## 📚 Citation
