@@ -1,15 +1,15 @@
 {%- assign gid = include.id | default: page.gallery | default: page.gallery_id -%}
-{%- if gid == nil or gid == "" -%}
-{%- else -%}
+{%- if gid -%}
   {%- assign g = site.data[gid] -%}
-  {%- if g == nil -%}
-    <p><em>Gallery “{{ gid }}” not found in <code>_data/</code>.</em></p>
-  {%- else -%}
+  {%- if g -%}
+    {%- comment -%} Normalize: a single section or an array of sections {%- endcomment -%}
     {%- if g.images -%}
       {%- assign sections = [ g ] -%}
     {%- else -%}
       {%- assign sections = g -%}
     {%- endif -%}
+
+    {%- assign gcount = 0 -%} {# global counter to mark first 3 eager #}
 
     <div class="columns is-multiline is-variable is-2">
       {%- for section in sections -%}
@@ -21,54 +21,55 @@
           {%- assign ratio = img.ratio | default: 'is-16by9' -%}
 
           {%- assign link = img.link -%}
-          {%- if link and link != '' and link | slice: 0,1 != '/' -%}
+          {%- if link and link != '' and link | slice: 0,1 != '/' and link contains '://' == false -%}
             {%- assign link = '/' | append: link -%}
           {%- endif -%}
 
           {%- assign large_link = img.large_link | default: link -%}
-          {%- assign alt = img.alt | default: img.caption | default: '' -%}
+
+          {%- comment -%} Accessible alt: prefer explicit alt, else caption, else filename {%- endcomment -%}
+          {%- assign alt = img.alt | default: img.caption -%}
+          {%- if alt == nil or alt == '' -%}
+            {%- assign alt = link | split:'/' | last | replace:'-',' ' | replace:'_',' ' | split:'.' | first -%}
+          {%- endif -%}
+
+          {%- assign sidx = forloop.parentloop.index | default: 1 -%}
+          {%- assign iidx = forloop.index -%}
+          {%- assign uid = gid | append: '-' | append: sidx | append: '-' | append: iidx -%}
+
+          {%- assign is_eager = false -%}
+          {%- if gcount < 3 -%}{%- assign is_eager = true -%}{%- endif -%}
 
           <div class="column is-one-third">
-            {%- assign ratio = img.ratio | default: 'is-16by9' -%}
-            {%- assign link = img.link -%}
-            {%- if link and link != '' and link | slice: 0,1 != '/' -%}
-              {%- assign link = '/' | append: link -%}
-            {%- endif -%}
-            {%- assign large_link = img.large_link | default: link -%}
-            {%- assign alt = img.alt | default: img.caption | default: '' -%}
-
-            {%- comment -%}
-              Build a unique id: <gallery id>-<section idx>-<image idx>
-            {%- endcomment -%}
-            {%- assign sidx = forloop.parentloop.index | default: 1 -%}
-            {%- assign iidx = forloop.index -%}
-            {%- assign uid = gid | append: '-' | append: sidx | append: '-' | append: iidx -%}
-
-            <!-- Bulma ratio wrapper to keep uniform tile height -->
             <figure class="image {{ ratio }}">
-              <!-- Thumbnail -->
-              <a href="#lb-{{ uid }}" class="gallery-item">
+              <a href="#lb-{{ uid }}" class="gallery-item" aria-label="Open image {{ iidx }} in lightbox">
                 <div class="preview-container" style="width:100%; height:100%;">
-                  <img src="{{ link | relative_url }}" alt="{{ alt }}">
+                  <img
+                    src="{{ link | relative_url }}"
+                    alt="{{ alt | escape }}"
+                    {% if is_eager %}loading="eager" decoding="sync" fetchpriority="high"{% endif %}>
                   <div class="hover-effect">Click to view</div>
                 </div>
               </a>
             </figure>
 
-            <!-- Lightbox -->
-            <div id="lb-{{ uid }}" class="lightbox" markdown="0">
-              <a href="#!" class="lightbox-close"></a>
-              <img src="{{ large_link | relative_url }}" alt="{{ alt }}">
+            <div id="lb-{{ uid }}" class="lightbox" markdown="0" aria-hidden="true">
+              <a href="#!" class="lightbox-close" aria-label="Close image"></a>
+              <img src="{{ large_link | relative_url }}" alt="{{ alt | escape }}" decoding="async">
             </div>
 
-            {%- if img.description -%}
-              <div class="content is-small" style="margin-top:.4rem;">
-                {{ img.description | markdownify }}
-              </div>
+            {%- if img.caption or img.description -%}
+              <figcaption class="content is-small" style="margin-top:.4rem;">
+                {{ img.caption | default: img.description | markdownify }}
+              </figcaption>
             {%- endif -%}
           </div>
+
+          {%- assign gcount = gcount | plus: 1 -%}
         {%- endfor -%}
       {%- endfor -%}
     </div>
+  {%- else -%}
+    <p><em>Gallery “{{ gid }}” not found in <code>_data/</code>.</em></p>
   {%- endif -%}
 {%- endif -%}

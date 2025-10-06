@@ -9,7 +9,9 @@ hero_compact: true
   <!-- Avatar -->
   <div class="column is-narrow">
     <figure class="avatar-hero" aria-hidden="true">
-      <img src="{{ '/assets/thumbnails/aser.jpg' | relative_url }}" alt="Portrait of Boammani Aser Lompo">
+    <img src="{{ '/assets/thumbnails/aser.jpg' | relative_url }}"
+         alt="Portrait"
+         loading="eager" decoding="sync" fetchpriority="high">
     </figure>
   </div>
 
@@ -18,7 +20,7 @@ hero_compact: true
     <h2 class="title is-4" style="margin-bottom:.35rem;">Hi, I’m Aser 👋</h2>
     <p class="is-size-5" style="max-width:58ch;">
       MSc in Mathematics & Machine Learning. I work on <strong>Visual Reasoning</strong>,
-      <strong>Reinforcement Learning</strong>, and elegant bridges between theory and application, 
+      <strong>Reinforcement Learning</strong>, and elegant bridges between theory and application,
       especially with multimodal models.
     </p>
 
@@ -49,9 +51,10 @@ hero_compact: true
       </a>
       <a class="button is-warning is-light" href="https://huggingface.co/AserLompo" target="_blank" rel="noopener" aria-label="Hugging Face">
         <span class="icon">
-          <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg"
-               alt="Hugging Face logo"
-               style="height:18px; vertical-align:middle;">
+        <img class="hf-icon"
+             src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg"
+             alt="Hugging Face logo"
+             loading="eager" decoding="sync">
         </span>
         <span>Hugging Face</span>
       </a>

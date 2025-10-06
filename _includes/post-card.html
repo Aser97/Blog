@@ -2,8 +2,10 @@
   {% if post.image %}
   <div class="card-image">
     <figure class="image is-16by9">
-      <a href="{{ site.baseurl }}{{ post.url }}">
-        <img src="{{ site.baseurl }}{{ post.image }}" alt="{{ post.title }}" style="object-fit: cover; width: 100%; height: 100%;">
+      <a href="{{ post.url | relative_url }}" aria-label="Open post: {{ post.title | escape }}">
+        <img src="{{ site.baseurl }}{{ post.image }}" alt="{{ post.title }}"
+             style="object-fit: cover; width: 100%; height: 100%;"
+             loading="eager" decoding="sync">
         <div class="post-title-overlay">
           <h2 class="title is-4">{{ post.title }}</h2>
         </div>
@@ -26,13 +28,17 @@
     </div>
 
     <div class="has-text-centered">
-      <a href="{{ post.url | relative_url }}" class="button is-primary">
+      <a href="{{ post.url | relative_url }}" class="button is-primary" aria-label="Read more about {{ post.title | escape }}">
         Read more <span class="is-sr-only"> about {{ post.title }}</span>
       </a>
     </div>
   </div>
 
   <footer class="card-footer">
-    <p class="card-footer-item">Published: {{ post.date | date: '%b %-d, %Y' }}</p>
+    <p class="card-footer-item">
+      <time datetime="{{ post.date | date_to_xmlschema }}">
+        Published: {{ post.date | date: '%b %-d, %Y' }}
+      </time>
+    </p>
   </footer>
 </div>
