@@ -1,0 +1,64 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath, amssymb, amsthm, mathtools}
+\usepackage[margin=1in]{geometry}
+
+\title{When Class Imbalance Shifts the Decision Boundary: A Short Proof}
+\author{Boammani Aser Lompo}
+\date{\today}
+
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+
+\begin{document}
+\maketitle
+
+\section{Setup}
+Let $Y\in\{0,1\}$ with true prior $\pi = P(Y=1)$ and feature vector $X\in\mathcal{X}$. 
+Let $p(x\mid y)$ denote class-conditional densities and $p(x)=\sum_y p(x\mid y)P(Y=y)$.
+Suppose we train on an imbalanced sample with empirical prior $\hat\pi$ (typically $\hat\pi\neq\pi$).
+
+\section{Bayes decision rule}
+Under $0$--$1$ loss with equal costs, the Bayes classifier predicts $1$ iff
+\[
+\log \frac{p(x\mid 1)}{p(x\mid 0)} \;\ge\; \log\frac{1-\pi}{\pi}.
+\]
+Equivalently, $p(Y\!=\!1\mid x)\ge \tfrac12$.
+
+\begin{proposition}[Imbalanced-sample boundary shift]
+If a learner minimizes empirical $0$--$1$ risk on a sample whose class prior is $\hat\pi$, then as $n\to\infty$ it converges to the decision rule
+\[
+\log \frac{p(x\mid 1)}{p(x\mid 0)} \;\ge\; \log\frac{1-\hat\pi}{\hat\pi}.
+\]
+If $\hat\pi\neq\pi$, the decision threshold differs from the true Bayes threshold by
+\[
+\Delta \;=\; \log\frac{\pi}{1-\pi} \;-\; \log\frac{\hat\pi}{1-\hat\pi},
+\]
+biasing decisions toward the majority class of the training sample.
+\end{proposition}
+
+\begin{proof}
+Minimizing empirical $0$--$1$ risk on the sample is equivalent to using the sample distribution as the data-generating law; the Bayes optimal under that law uses prior $\hat\pi$. 
+Therefore the induced threshold is $\log\frac{1-\hat\pi}{\hat\pi}$.
+Subtract the true Bayes threshold $\log\frac{1-\pi}{\pi}$ to obtain $\Delta$.
+\end{proof}
+
+\section{Cross-entropy and prior correction}
+Under cross-entropy, logistic models learn $p_{\text{train}}(Y\!=\!1\mid x)$ with prior $\hat\pi$.
+If deployment prior $\pi$ differs, correct via
+\[
+\text{logit}\,p_{\text{test}}(1\mid x)
+=
+\text{logit}\,p_{\text{train}}(1\mid x)
++
+\log\frac{\pi/(1-\pi)}{\hat\pi/(1-\hat\pi)}.
+\]
+Alternatively, use class-weighted losses with $w_y \propto 1/\hat\pi_y$ or resampling to neutralize the sample prior.
+
+\section{Practical notes}
+State assumptions (no covariate shift, equal costs), clarify what ``bias'' means (boundary shift vs calibration vs minority metrics), and mention regularization/data scarcity effects.
+
+\section{Conclusion}
+Imbalance per se shifts the decision rule when the sample prior differs from deployment prior.
+The effect can be neutralized with weighting, resampling, calibrated thresholds, or prior-shift correction.
+
+\end{document}

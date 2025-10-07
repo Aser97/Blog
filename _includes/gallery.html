@@ -9,7 +9,8 @@
       {%- assign sections = g -%}
     {%- endif -%}
 
-    {%- assign gcount = 0 -%} {# global counter to mark first 3 eager #}
+    {%- assign gcount = 0 -%}
+    {%- comment -%} global counter to mark first 3 eager {%- endcomment -%}
 
     <div class="columns is-multiline is-variable is-2">
       {%- for section in sections -%}

@@ -16,6 +16,7 @@ The Chess Olympiad is the biggest event in the chess world. Every two years, all
 
 
 {% include gallery.html id="olympiad-gallery-1" thumb_width="260" %}
+
 ----
 ### 🔥Why this edition was special
 This Olympiad carried a unique weight for two reasons:
