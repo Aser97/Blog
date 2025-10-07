@@ -31,8 +31,8 @@ hero_compact: true
 
     <!-- New message -->
     <p class="is-size-6" style="margin-top:.75rem; max-width:58ch;">
-      <strong>I’m actively seeking opportunities</strong> and open to <strong>research collaborations</strong>.  
-      Don’t hesitate to <a href="mailto:lompoaser9@gmail.com" class="has-text-link">get in touch</a> or explore my Portfolio!
+      <strong>I’m actively seeking job opportunities</strong> and open to <strong>research collaborations</strong>.  
+      Don’t hesitate to <a href="mailto:lompoaser9@gmail.com" class="has-text-link">get in touch</a> or explore my <a href="{{ '/Projects/' | relative_url }}" class="has-text-link">portfolio</a> to see more of my work!
     </p>
 
     <!-- Buttons -->
@@ -70,6 +70,13 @@ hero_compact: true
 ## 🎯 Interests
 - Applied Mathematics, AI/ML (Reasoning, Foundation Models, Reinforcement Learning), AI Fairness
 
+### 🧠 Tech Stack
+
+- **Languages:** Python · JavaScript · C++ · Bash · HTML/CSS  
+- **Frameworks:** PyTorch · Transformers · JAX · Hugging Face · APIs  
+- **Tools:** Docker · Paperspace
+- **Focus Areas:** Visual-Reasoning · Number Encoding · Reinforcement Learning · Applied Maths
+
 ## 📄 Research
 - **Boammani Aser Lompo, Marc Haraoui**  
   *MODALITY-SWAP DISTILLATION: Rendering Textual Reasoning into Visual Supervision.*  
@@ -83,8 +90,6 @@ hero_compact: true
 - **Camille-Sovanneary Gauthier, Romaric Gaudel, Elisa Fromont, Boammani Aser Lompo**  
     *Parametric Graph for Unimodal Ranking Bandit.* **ICML 2021** —
     <a href="https://hal.archives-ouvertes.fr/hal-03256621/" class="tag is-warning is-light" target="_blank" rel="noopener">HAL</a>
-
-- **Reviewer:** ICCV 2023 • CVPR 2026 • ICLR 2026
 
 ## 🌟 Distinctions
 - **Best Oral Presentation**, 91e Congrès de l’Acfas (2024)

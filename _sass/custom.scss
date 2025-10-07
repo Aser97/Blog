@@ -686,3 +686,115 @@ html { scroll-behavior: smooth; }
     backdrop-filter: saturate(120%) blur(8px);
   }
 }
+
+
+/* Global subtitle size (wins over earlier rules) */
+.subtitle{ font-size: 1rem !important; line-height: 1.4; }
+@media (max-width:768px){ .subtitle{ font-size:.95rem !important; } }
+
+
+
+
+
+/* ===========================
+   CALM READING REFINEMENTS
+   =========================== */
+
+/* Softer dark palette (less pure black, less glow) */
+@media (prefers-color-scheme: dark) {
+  body, .section { background: #0f1117 !important; color: #e5e7eb; }
+
+  /* Cards / boxes: raise bg slightly, soften borders & shadows */
+  .card, .box {
+    background: #111418 !important;
+    border: 1px solid rgba(148,163,184,0.14) !important;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.32) !important; /* less spread, no white glow */
+  }
+  .card .content, .box .content { color: #cbd5e1 !important; }
+
+  /* Navbar: reduce blur + transparency */
+  .navbar, .navbar.is-primary {
+    background: rgba(17,23,34,0.9) !important;
+    backdrop-filter: blur(4px) saturate(120%);
+    border-bottom: 1px solid rgba(148,163,184,0.14);
+  }
+
+  /* Links: calmer blue + higher legibility */
+  a { color: #93b4ff; }
+  a:hover { color: #c7d6ff; }
+
+  /* Hero: dial back the neon */
+  .ms-hero {
+    background:
+      radial-gradient(900px 450px at 15% -10%, rgba(103,232,249,0.25) 0%, transparent 45%),
+      radial-gradient(900px 450px at 95% 0%,  rgba(167,139,250,0.22) 0%, transparent 45%),
+      linear-gradient(180deg, #0f1117, #0f1117) !important;
+    border-bottom: 1px solid rgba(148,163,184,0.14);
+  }
+}
+
+/* Light mode: reduce stark white, soften contrast */
+@media (prefers-color-scheme: light) {
+  body, .section { background: #f7f7fb !important; color: #1f2937; }
+  .card, .box {
+    background: #ffffff !important;
+    border: 1px solid #e6e8ee !important;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.06) !important;
+  }
+  .navbar, .navbar.is-primary {
+    background: rgba(255,255,255,0.9) !important;
+    backdrop-filter: blur(4px);
+    border-bottom: 1px solid #e6e8ee;
+  }
+  .ms-hero {
+    background:
+      radial-gradient(900px 450px at 15% -10%, rgba(102,153,255,0.18) 0%, transparent 45%),
+      radial-gradient(900px 450px at 95% 0%,  rgba(180,120,255,0.16) 0%, transparent 45%),
+      linear-gradient(180deg, #ffffff, #fafafa) !important;
+    border-bottom: 1px solid #e6e8ee;
+  }
+}
+
+/* Typography: easier long-form reading */
+body { font-size: 17px; line-height: 1.8; letter-spacing: 0; }
+.container .content { max-width: 72ch; }
+.content p { margin: 1.05rem 0; color: inherit; }
+.content h2 { margin-top: 1.8rem; margin-bottom: .75rem; }
+
+/* Code: avoid pure black blocks; raise contrast of text */
+pre, code {
+  background-color: #0b1220 !important;  /* softer than #000 */
+  color: #e6edf3 !important;
+}
+pre { border-radius: 8px; }
+
+/* Buttons, icons: reduce motion & glow */
+.ms-follow a, .button {
+  box-shadow: none !important;
+  transition: transform .08s ease, background .15s ease, color .15s ease;
+}
+.ms-follow a:hover, .button:hover { transform: translateY(-1px); }
+
+/* TOC: flat, no border/shadow (override Calm Reading .box styles) */
+.ms-toc,
+.ms-toc .box,
+.ms-toc .menu,
+.ms-toc .menu-list {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+/* keep items clean and use theme hovers only */
+.ms-toc .menu-list a {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* compact spacing inside the wrapper */
+.ms-toc .box { padding: 0 !important; }
+
+/* Footer: keep depth but less glow */
+@media (prefers-color-scheme: dark) {
+  .ms-footer { box-shadow: 0 -6px 20px rgba(0,0,0,0.45); }
+}

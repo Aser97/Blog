@@ -23,11 +23,27 @@ Visual reasoning over structured data such as tables is a critical capability fo
 
 Addressing this gap, we introduce **Visual-TableQA**, a large-scale, open-domain multimodal dataset specifically designed to evaluate and enhance visual reasoning over complex tabular data. Our generation pipeline is **modular, scalable, and fully autonomous**, involving multiple reasoning LLMs collaborating across distinct roles: generation, validation, and inspiration.  
 
-**Visual-TableQA** comprises 2.5k richly structured LaTeX-rendered tables and 6k reasoning-intensive QA pairs, all produced at a cost of under \$100. To promote diversity and creativity, our pipeline performs **multi-model collaborative data generation** via **cross-model prompting (‘inspiration’)** and LLM-jury filtering. Stronger models seed layouts and topics that weaker models elaborate, collectively distilling diverse reasoning patterns and visual structures into the dataset.  
+**Visual-TableQA** comprises 2.5k richly structured LaTeX-rendered tables and 9k reasoning-intensive QA pairs, all produced at a cost of under \$100. To promote diversity and creativity, our pipeline performs **multi-model collaborative data generation** via **cross-model prompting (‘inspiration’)** and LLM-jury filtering. Stronger models seed layouts and topics that weaker models elaborate, collectively distilling diverse reasoning patterns and visual structures into the dataset.  
 
 Empirical results show that models fine-tuned on **Visual-TableQA** generalize robustly to external benchmarks, outperforming several proprietary models despite the dataset’s synthetic nature.  
 
+## Pipeline
 The full pipeline and resources are publicly available in our [GitHub repository](https://github.com/AI-4-Everyone/Visual-TableQA-v2).
+
+<div markdown="0" style="text-align:center; width: 770px;">
+  <a href="#img-sample">
+    <div class="preview-container" style="display:inline-block;">
+      <img src="{{ site.baseurl }}/assets/Visual-TableQA/tableqa.png"
+           alt="Preview of the document">
+      <div class="hover-effect">Click to view</div>
+    </div>
+  </a>
+</div>
+<!-- Lightbox -->
+<div id="img-sample" class="lightbox" markdown="0">
+  <a href="#!" class="lightbox-close"></a>
+  <img src="{{ site.baseurl }}/assets/Visual-TableQA/tableqa.png" alt="Full-size preview">
+</div>
 
 ## 📊 Results  
 Below is a sample of tables and QA pairs generated through our pipeline:  

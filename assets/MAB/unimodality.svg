@@ -1,0 +1,162 @@
+<svg width="100%" height="auto"
+     viewBox="-220 -180 1600 1000"
+     preserveAspectRatio="xMidYMid meet"
+     overflow="visible"
+     xmlns="http://www.w3.org/2000/svg"
+     role="img" aria-labelledby="title desc">
+  <title id="title">Unimodal Efficiency on the Transposition Graph of Permutations</title>
+  <desc id="desc">A 3D-style isometric illustration showing nodes (permutations) connected by transposition edges on a single-peaked surface, with a monotone ascending path to the global optimum.</desc>
+
+  <!-- ====== Defs: gradients, shadows, arrow markers ====== -->
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0b1020"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+
+    <linearGradient id="surface" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2e7dd7" stop-opacity="0.18"/>
+      <stop offset="50%" stop-color="#58b3ff" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#8fd3fe" stop-opacity="0.18"/>
+    </linearGradient>
+
+    <radialGradient id="peakGlow" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#ffd166" stop-opacity="0.9"/>
+      <stop offset="60%" stop-color="#ffd166" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#ffd166" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- BIGGER FILTER REGION SO NOTHING GETS CLIPPED -->
+    <filter id="softShadow" x="-150%" y="-150%" width="400%" height="400%">
+      <feDropShadow dx="0" dy="2" stdDeviation="6" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#22c55e"/>
+    </marker>
+
+    <marker id="axisArrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#9ca3af"/>
+    </marker>
+  </defs>
+
+  <!-- ====== Background (expanded to match larger viewBox) ====== -->
+  <rect x="-220" y="-180" width="1600" height="1000" fill="url(#sky)"/>
+
+  <!-- ====== Isometric axes ====== -->
+  <g stroke="#9ca3af" stroke-width="2" opacity="0.9">
+    <line x1="160" y1="480" x2="820" y2="360" marker-end="url(#axisArrow)"/>
+    <line x1="160" y1="480" x2="120" y2="220" marker-end="url(#axisArrow)"/>
+    <line x1="160" y1="480" x2="200" y2="130" marker-end="url(#axisArrow)"/>
+  </g>
+
+  <!-- Axis labels -->
+  <g fill="#cbd5e1" font-family="Inter, ui-sans-serif, system-ui" font-size="14">
+    <text x="920" y="365">Sₙ neighborhood (Cayley graph by transpositions)</text>
+    <text x="100" y="210" text-anchor="end">Transposition hops / graph distance</text>
+    <text x="210" y="120">Efficiency f(π)</text>
+  </g>
+
+  <!-- ====== Surface mesh (single-peaked) ====== -->
+  <g filter="url(#softShadow)">
+    <path d="M140,500 C280,470 380,460 520,440 C660,420 720,410 840,380 L840,520 L140,520 Z"
+          fill="url(#surface)" stroke="#60a5fa" stroke-opacity="0.25" stroke-width="1.2"/>
+    <path d="M160,470 C300,440 410,430 550,410 C690,392 740,380 820,360 L820,400 L160,430 Z"
+          fill="url(#surface)" stroke="#93c5fd" stroke-opacity="0.30" stroke-width="1.2"/>
+    <path d="M190,440 C320,410 440,395 580,378 C690,365 735,355 790,342 L790,360 L190,380 Z"
+          fill="url(#surface)" stroke="#bae6fd" stroke-opacity="0.35" stroke-width="1.1"/>
+    <circle cx="640" cy="325" r="90" fill="url(#peakGlow)" opacity="0.6"/>
+  </g>
+
+  <!-- Peak marker -->
+  <g>
+    <circle cx="640" cy="325" r="6" fill="#f59e0b" stroke="#fde68a" stroke-width="2"/>
+    <text x="650" y="320" fill="#fde68a" font-family="Inter, ui-sans-serif" font-size="14" font-weight="600">π* (global optimum)</text>
+  </g>
+
+  <!-- ====== Graph nodes & edges ====== -->
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <g stroke="#64748b" stroke-opacity="0.65" stroke-width="2">
+      <line x1="260" y1="455" x2="360" y2="440"/>
+      <line x1="360" y1="440" x2="470" y2="425"/>
+      <line x1="470" y1="425" x2="585" y2="405"/>
+      <line x1="585" y1="405" x2="700" y2="385"/>
+
+      <line x1="230" y1="425" x2="335" y2="410"/>
+      <line x1="335" y1="410" x2="455" y2="395"/>
+      <line x1="455" y1="395" x2="575" y2="378"/>
+      <line x1="575" y1="378" x2="690" y2="360"/>
+
+      <line x1="270" y1="395" x2="385" y2="380"/>
+      <line x1="385" y1="380" x2="510" y2="365"/>
+      <line x1="510" y1="365" x2="625" y2="348"/>
+      <line x1="625" y1="348" x2="700" y2="335"/>
+
+      <line x1="260" y1="455" x2="230" y2="425"/>
+      <line x1="360" y1="440" x2="335" y2="410"/>
+      <line x1="470" y1="425" x2="455" y2="395"/>
+      <line x1="585" y1="405" x2="575" y2="378"/>
+      <line x1="700" y1="385" x2="690" y2="360"/>
+
+      <line x1="335" y1="410" x2="270" y2="395"/>
+      <line x1="455" y1="395" x2="385" y2="380"/>
+      <line x1="575" y1="378" x2="510" y2="365"/>
+      <line x1="690" y1="360" x2="625" y2="348"/>
+    </g>
+
+    <g>
+      <circle cx="260" cy="455" r="5.5" fill="#0ea5e9" stroke="#e0f2fe" stroke-width="1.2"/>
+      <circle cx="360" cy="440" r="5.5" fill="#0ea5e9" stroke="#e0f2fe" stroke-width="1.2"/>
+      <circle cx="470" cy="425" r="5.5" fill="#0ea5e9" stroke="#e0f2fe" stroke-width="1.2"/>
+      <circle cx="585" cy="405" r="5.5" fill="#0ea5e9" stroke="#e0f2fe" stroke-width="1.2"/>
+      <circle cx="700" cy="385" r="5.5" fill="#0ea5e9" stroke="#e0f2fe" stroke-width="1.2"/>
+
+      <circle cx="230" cy="425" r="5.5" fill="#38bdf8" stroke="#e0f2fe" stroke-width="1.2"/>
+      <circle cx="335" cy="410" r="5.5" fill="#38bdf8" stroke="#e0f2fe" stroke-width="1.2"/>
+      <circle cx="455" cy="395" r="5.5" fill="#38bdf8" stroke="#e0f2fe" stroke-width="1.2"/>
+      <circle cx="575" cy="378" r="5.5" fill="#38bdf8" stroke="#e0f2fe" stroke-width="1.2"/>
+      <circle cx="690" cy="360" r="5.5" fill="#38bdf8" stroke="#e0f2fe" stroke-width="1.2"/>
+
+      <circle cx="270" cy="395" r="5.5" fill="#7dd3fc" stroke="#e0f2fe" stroke-width="1.2"/>
+      <circle cx="385" cy="380" r="5.5" fill="#7dd3fc" stroke="#e0f2fe" stroke-width="1.2"/>
+      <circle cx="510" cy="365" r="5.5" fill="#7dd3fc" stroke="#e0f2fe" stroke-width="1.2"/>
+      <circle cx="625" cy="348" r="5.5" fill="#7dd3fc" stroke="#e0f2fe" stroke-width="1.2"/>
+      <circle cx="700" cy="335" r="5.5" fill="#7dd3fc" stroke="#e0f2fe" stroke-width="1.2"/>
+
+      <circle cx="640" cy="325" r="6.5" fill="#f59e0b" stroke="#fde68a" stroke-width="2"/>
+    </g>
+  </g>
+
+  <!-- ====== Monotone increasing path to π* ====== -->
+  <g stroke="#22c55e" stroke-width="3" fill="none" marker-end="url(#arrow)">
+    <path d="M 230 425 L 335 410 L 455 395 L 575 378 L 625 348 L 640 325"/>
+  </g>
+  <g fill="#86efac" font-family="Inter, ui-sans-serif" font-size="13">
+    <text x="240" y="418">increasing path</text>
+  </g>
+
+  <!-- ====== Corner labels ====== -->
+  <g fill="#cbd5e1" font-family="Inter, ui-sans-serif" font-size="16">
+    <text x="32" y="36" font-weight="600">Unimodality assumption</text>
+    <text x="32" y="60">Unique local maximum ⇒ global maximum; every node has a monotone path to π*</text>
+  </g>
+
+  <!-- ====== Legend ====== -->
+  <g transform="translate(30,520)">
+    <rect x="0" y="0" width="360" height="80" rx="8" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.12)"/>
+    <g transform="translate(14,16)" font-family="Inter, ui-sans-serif" font-size="13" fill="#e5e7eb">
+      <g>
+        <circle cx="8" cy="8" r="5" fill="#38bdf8" stroke="#e0f2fe" stroke-width="1"/>
+        <text x="24" y="12">node = permutation π ∈ Sₙ</text>
+      </g>
+      <g transform="translate(0,22)">
+        <line x1="3" y1="6" x2="22" y2="6" stroke="#64748b" stroke-width="2"/>
+        <text x="28" y="10">edge = one transposition (adjacent in Cayley graph)</text>
+      </g>
+      <g transform="translate(0,44)">
+        <line x1="3" y1="6" x2="28" y2="6" stroke="#22c55e" stroke-width="3" marker-end="url(#arrow)"/>
+        <text x="34" y="10">monotone ascent in efficiency f(π)</text>
+      </g>
+    </g>
+  </g>
+</svg>

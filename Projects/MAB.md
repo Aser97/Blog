@@ -17,6 +17,31 @@ sidebar_docs:
     thumb: /assets/thumbnails/MAB_thumbnail.png
 ---
 
+<!-- Preview with hover -->
+<div markdown="0" style="text-align:center;">
+  <a href="#lb-mab">
+    <div class="preview-container" style="display:inline-block; width: 780px; max-width: 100%;">
+      <img src="{{ '/assets/MAB/unimodality.svg' | relative_url }}"
+           alt="Unimodal efficiency on the transposition graph (permutations)">
+      <div class="hover-effect">Click to zoom</div>
+    </div>
+  </a>
+</div>
+
+<!-- Lightbox (click background to close) -->
+<div id="lb-mab" class="lightbox" markdown="0">
+  <a href="#!" class="lightbox-close"></a>
+  <img src="{{ '/assets/MAB/unimodality.svg' | relative_url }}"
+       alt="Unimodal efficiency on the transposition graph (permutations)">
+</div>
+
+<!-- Caption -->
+<p class="has-text-centered is-size-6" style="margin-top:0.5rem; color:#94a3b8;">
+  <em>Figure:</em> Illustration of the <strong>unimodality assumption</strong> in the transposition graph of permutations.
+  Each node represents a permutation (a recommendation) π ∈ Sₙ, and edges connect transposition neighbors.
+  The efficiency function f(π) (the number of clicks per recommendation) forms a single global peak, ensuring that from any node there exists a strictly
+  <span style="color:#22c55e;">increasing path</span> toward the optimal permutation π*.
+</p>
 ## 💡Abstract
 
 We tackle the online ranking problem of assigning L items to K positions on a web page in order to maximize the number of user clicks. We propose an original algorithm, easy to implement and with strong theoretical guarantees to tackle this problem in the Position-Based Model (PBM) setting, well suited for applications where items are displayed on a grid. Besides learning to rank, our

@@ -7,10 +7,10 @@
       link: /Projects/Visual-TableQA
     - name: 📈 Parametric Multi-Armed-Bandit
       link: /Projects/MAB
-    - name: ⚖️ Optimal Transport
-      link: /Projects/Optimal
     - name: 🧮 LLM Number Encoding
       link: /Projects/LESA
+    - name: ⚖️ Optimal Transport
+      link: /Projects/Optimal
     - name: 🧠 Reasoning in NLP
       link: /Projects/Reasoning
     - name: ♟️ RL for Chess
