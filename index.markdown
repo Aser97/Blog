@@ -72,7 +72,7 @@ hero_compact: true
 
 ### 🧠 Tech Stack
 
-- **Languages:** Python · JavaScript · C++ · Bash · HTML/CSS  
+- **Languages:** Python · Model Context Protocol (MCP) · JavaScript · C++ · Bash · HTML/CSS  
 - **Frameworks:** PyTorch · Transformers · JAX · Hugging Face · APIs  
 - **Tools:** Docker · Paperspace
 - **Focus Areas:** Visual-Reasoning · Number Encoding · Reinforcement Learning · Applied Maths
