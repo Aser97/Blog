@@ -33,10 +33,8 @@
                 <div class="columns is-multiline">
                   {% if page.menubar_toc %}
                     <div class="column is-12-mobile is-4-tablet is-3-desktop ms-toc">
-                      {% assign contentsTitle = page.toc_title | default: 'Contents' %}
-                      {% include toc.html html=content class='menu-list' h_min=2 h_max=3 contents_title=contentsTitle %}
 
-                      {%- comment -%} --- Dynamic resource thumbnails (one or many) --- {%- endcomment -%}
+                      {%- comment -%} --- Dynamic resource thumbnails FIRST (one or many) --- {%- endcomment -%}
                       {% if page.sidebar_docs %}
                         <div class="ms-toc-docs">
                           <p class="menu-label">{{ page.sidebar_docs_label | default: '📘 Resources' }}</p>
@@ -57,7 +55,7 @@
                             {%- endif -%}
 
                             {%- assign is_circle = false -%}
-                            {%- if final_thumb contains 'jupyter' or final_thumb contains 'github' -%}
+                            {%- if final_thumb contains 'jupyter' or final_thumb contains 'github' or final_thumb contains 'huggingface' -%}
                               {%- assign is_circle = true -%}
                             {%- endif -%}
 
@@ -124,6 +122,11 @@
                           </div>
                         {% endif %}
                       {% endif %}
+
+                      {%- comment -%} --- Table of Contents (below resources) --- {%- endcomment -%}
+                      {% assign contentsTitle = page.toc_title | default: 'Contents' %}
+                      {% include toc.html html=content class='menu-list' h_min=2 h_max=3 contents_title=contentsTitle %}
+
                     </div>
                   {% elsif page.menubar %}
                     <div class="column is-4-desktop is-4-tablet">

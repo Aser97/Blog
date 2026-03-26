@@ -17,6 +17,8 @@
       link: /Projects/Chess
 - name: 📰📸 Posts
   dropdown:
+    - name: 🛡️ Building a Custom Dataset for a Youth Mental Health Safety Guardrail
+      link: /guardrail-dataset/
     - name: 🚀 Customizing a Vision Language Model (VLM)
       link: /vlm-custom/
     - name: ♟️ 45th Chess Olympiad

@@ -70,13 +70,6 @@ hero_compact: true
 ## 🎯 Interests
 - Applied Mathematics, AI/ML (Reasoning, Foundation Models, Reinforcement Learning), AI Fairness
 
-### 🧠 Tech Stack
-
-- **Languages:** Python · Model Context Protocol (MCP) · JavaScript · C++ · Bash · HTML/CSS  
-- **Frameworks:** PyTorch · Transformers · JAX · Hugging Face · APIs  
-- **Tools:** Docker · Paperspace
-- **Focus Areas:** Visual-Reasoning · Number Encoding · Reinforcement Learning · Applied Maths
-
 ## 📄 Research
 - **Boammani Aser Lompo, Marc Haraoui**  
   *MODALITY-SWAP DISTILLATION: Rendering Textual Reasoning into Visual Supervision.*  
@@ -90,6 +83,13 @@ hero_compact: true
 - **Camille-Sovanneary Gauthier, Romaric Gaudel, Elisa Fromont, Boammani Aser Lompo**  
     *Parametric Graph for Unimodal Ranking Bandit.* **ICML 2021** —
     <a href="https://hal.archives-ouvertes.fr/hal-03256621/" class="tag is-warning is-light" target="_blank" rel="noopener">HAL</a>
+
+    ### 🧠 Tech Stack
+
+    - **Languages:** Python · Model Context Protocol (MCP) · JavaScript · C++ · Bash · HTML/CSS  
+    - **Frameworks:** PyTorch · Transformers · JAX · Hugging Face · APIs  
+    - **Tools:** Docker · Paperspace
+    - **Focus Areas:** Visual-Reasoning · Number Encoding · Reinforcement Learning · Applied Maths
 
 ## 🌟 Distinctions
 - **Best Oral Presentation**, 91e Congrès de l’Acfas (2024)
