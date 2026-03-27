@@ -1,27 +1,28 @@
 - name: 🎨 Portfolio
-  #link: /about/
   dropdown:
-    - name: 🔄 Modality Swap
+    - name: 🔄 Modality Swap — VLM Fine-tuning
       link: /Projects/Modality-Swap
-    - name: 📊 Visual-TableQA
+    - name: 📊 Visual-TableQA — Multimodal Dataset
       link: /Projects/Visual-TableQA
-    - name: 📈 Parametric Multi-Armed-Bandit
-      link: /Projects/MAB
+    - name: 🧠 Reasoning in NLP
+      link: /Projects/Reasoning
     - name: 🧮 LLM Number Encoding
       link: /Projects/LESA
     - name: ⚖️ Optimal Transport
       link: /Projects/Optimal
-    - name: 🧠 Reasoning in NLP
-      link: /Projects/Reasoning
+    - name: 📈 Multi-Armed Bandit
+      link: /Projects/MAB
     - name: ♟️ RL for Chess
       link: /Projects/Chess
-- name: 📰📸 Posts
+- name: 📰 Posts
   dropdown:
-    - name: 🛡️ Building a Custom Dataset for a Youth Mental Health Safety Guardrail
+    - name: 🛡️ Youth Mental Health Safety Guardrail
       link: /guardrail-dataset/
-    - name: 🚀 Customizing a Vision Language Model (VLM)
+    - name: 🚀 Customizing a Vision-Language Model
       link: /vlm-custom/
     - name: ♟️ 45th Chess Olympiad
       link: /chess-olympiad/
     - name: ⚖️ Unbalanced Optimal Transport
       link: /color-transfer/
+- name: 💼 Resume
+  link: /Resume/

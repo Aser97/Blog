@@ -49,7 +49,7 @@ The full pipeline and resources are publicly available in our [GitHub repository
 Below is a sample of tables and QA pairs generated through our pipeline:  
 
 <div markdown="0" style="text-align:center; width: 570px;">
-  <a href="#img-sample">
+  <a href="#img-results">
     <div class="preview-container" style="display:inline-block;">
       <img src="{{ site.baseurl }}/assets/Visual-TableQA/sample.png"
            alt="Preview of the document">
@@ -58,7 +58,7 @@ Below is a sample of tables and QA pairs generated through our pipeline:
   </a>
 </div>
 <!-- Lightbox -->
-<div id="img-sample" class="lightbox" markdown="0">
+<div id="img-results" class="lightbox" markdown="0">
   <a href="#!" class="lightbox-close"></a>
   <img src="{{ site.baseurl }}/assets/Visual-TableQA/sample.png" alt="Full-size preview">
 </div>

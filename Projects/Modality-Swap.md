@@ -203,7 +203,7 @@ The figures below report the outcomes of supervised finetuning on Visual-TableQA
 
 
 <div markdown="0" style="text-align:center;">
-  <a href="#img-juries">
+  <a href="#img-results-2">
     <div class="preview-container" style="width: 670px;">
       <img src="{{ site.baseurl }}/assets/Modality-Swap/results-2.png"
            alt="Preview of the document">
@@ -212,7 +212,7 @@ The figures below report the outcomes of supervised finetuning on Visual-TableQA
   </a>
 </div>
 <!-- Lightbox -->
-<div id="img-juries" class="lightbox" markdown="0">
+<div id="img-results-2" class="lightbox" markdown="0">
   <a href="#!" class="lightbox-close"></a>
   <img src="{{ site.baseurl }}/assets/Modality-Swap/results-2.png" alt="Full-size preview">
 </div>

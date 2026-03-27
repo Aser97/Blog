@@ -1,0 +1,1 @@
+During this whole project, always ask for consent before implementing buggs fixes because I need to follow what's going on when a bug happens

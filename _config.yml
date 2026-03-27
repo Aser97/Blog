@@ -19,13 +19,14 @@
 # in the templates via {{ site.myvariable }}.
 
 
+title: Boammani Aser Lompo — AI Research
 description: >
   MSc in Mathematics & Machine Learning. Visual reasoning, reinforcement learning,
   and elegant bridges between theory and application with multimodal models.
 timezone: "America/Toronto"   # or your actual TZ
 
 baseurl: "/Blog" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "" # set to https://Aser97.github.io before deploying to GitHub Pages
 twitter_username: AserLompo
 github_username:  Aser97
 fixed_navbar: top
@@ -37,6 +38,10 @@ social:
   instagram: https://www.instagram.com/aserlompo?igsh=MXBhbDBkZHR3YWtraQ%3D%3D&utm_source=qr
   tiktok: https://www.tiktok.com/@aserlompo?_t=ZM-8uQwpcplb30&_r=1
 
+
+# Exclude node_modules symlink from watch/build — prevents file watcher hanging
+exclude:
+  - node_modules
 
 # Build settings
 theme: bulma-clean-theme
