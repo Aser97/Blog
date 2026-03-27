@@ -9,9 +9,9 @@ $tabs-link-active-border-bottom-color: $primary;
 
 $modal-content-width: 800px;
 
+$hero-darken: #363636 !default;
 @import "../node_modules/bulma/sass";
 @import "../node_modules/bulma/sass/utilities/mixins";
-$hero-darken: $dark !default;
 
 @import "layout";
 @import "syntax";
