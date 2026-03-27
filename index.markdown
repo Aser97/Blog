@@ -62,36 +62,102 @@ hero_compact: true
   </div>
 </div>
 
-## 🎓 Education
-- **2023–Present** — Machine Learning Master of Research, **MILA/ETS, Montréal**
-- **2021–2022** — Master Maths Vision Apprentissage, **ENS Paris-Saclay**
-- **2019–2021** — Master of Fundamental Mathematics / **Agrégation de Mathématiques**, **ENS Rennes**
-
 ## 🎯 Interests
-- Applied Mathematics, AI/ML (Reasoning, Foundation Models, Reinforcement Learning), AI Fairness
+- Applied Mathematics, AI/ML (Reasoning, Foundation Models, Reinforcement Learning), AI Fairness, AI Safety
 
 ## 📄 Research
-- **Boammani Aser Lompo, Marc Haraoui**  
-  *MODALITY-SWAP DISTILLATION: Rendering Textual Reasoning into Visual Supervision.*  
+- **Boammani Aser Lompo, Marc Haraoui**
+  *MODALITY-SWAP DISTILLATION: Rendering Textual Reasoning into Visual Supervision.*
   Under review at **ICLR 2026** — <a href="{{ site.baseurl }}/assets/documents/Visual_TableQA_ICLR_2026.pdf" class="tag is-link is-light" target="_blank">PDF</a>
-- **Boammani Aser Lompo, Marc Haraoui**  
-  *Visual-TableQA: Open-Domain Benchmark for Reasoning over Table Images.*  
+- **Boammani Aser Lompo, Marc Haraoui**
+  *Visual-TableQA: Open-Domain Benchmark for Reasoning over Table Images.*
   **NeurIPS 2025 Workshop** — <a href="https://arxiv.org/pdf/2509.07966" class="tag is-info is-light" target="_blank">arXiv</a>
-- **Boammani Aser Lompo, Thanh-Dung Le, Philippe Jouvet, Rita Noumeir**  
-    *Multi-objective Representation for Numbers in Clinical Narratives: A CamemBERT-Bio-Based Alternative to Large-Scale LLMs.* **CoRR 2024** —
-    <a href="https://doi.org/10.48550/arXiv.2405.18448" class="tag is-info is-light" target="_blank" rel="noopener">DOI</a>
-- **Camille-Sovanneary Gauthier, Romaric Gaudel, Elisa Fromont, Boammani Aser Lompo**  
-    *Parametric Graph for Unimodal Ranking Bandit.* **ICML 2021** —
-    <a href="https://hal.archives-ouvertes.fr/hal-03256621/" class="tag is-warning is-light" target="_blank" rel="noopener">HAL</a>
+- **Boammani Aser Lompo, Thanh-Dung Le, Philippe Jouvet, Rita Noumeir**
+  *Multi-objective Representation for Numbers in Clinical Narratives: A CamemBERT-Bio-Based Alternative to Large-Scale LLMs.* **CoRR 2024** —
+  <a href="https://doi.org/10.48550/arXiv.2405.18448" class="tag is-info is-light" target="_blank" rel="noopener">DOI</a>
+- **Camille-Sovanneary Gauthier, Romaric Gaudel, Elisa Fromont, Boammani Aser Lompo**
+  *Parametric Graph for Unimodal Ranking Bandit.* **ICML 2021** —
+  <a href="https://hal.archives-ouvertes.fr/hal-03256621/" class="tag is-warning is-light" target="_blank" rel="noopener">HAL</a>
+- **Boammani Aser Lompo**
+  *Impact of Spurious Correlation on Gradient Descent Dynamics and Generalization.* (submission soon) —
+  <a href="https://github.com/Aser97/Class-Imbalance-And-Gradient-Descent-Dynamics" class="tag is-dark is-light" target="_blank" rel="noopener">GitHub</a>
 
-    ### 🧠 Tech Stack
+- **Reviewer:** ICCV 2023 • CVPR 2026 • ICLR 2026
 
-    - **Languages:** Python · Model Context Protocol (MCP) · JavaScript · C++ · Bash · HTML/CSS
-    - **Frameworks:** PyTorch · Transformers · JAX · Hugging Face · APIs
-    - **Tools:** Docker · Paperspace
-    - **Focus Areas:** Visual-Reasoning · Number Encoding · Reinforcement Learning · Applied Maths
+## 🧩 Featured Projects
 
-## 🌟 Distinctions
-- **Best Oral Presentation**, 91e Congrès de l’Acfas (2024)
-- **Scholarships:** R-SADC research grant (23k), French Government Excellence Grant (50k)
-- **Math:** IMO Honourable Mention (2014) • PAMO Gold (2015) • National winner (Burkina Faso, 2015)
+<div class="columns is-multiline">
+
+  <div class="column is-half">
+    <div class="card">
+      <div class="card-content">
+        <p class="title is-6">🛡️ Youth Mental Health Safety Guardrail</p>
+        <p class="subtitle is-7 has-text-grey">Fine-tuned Qwen2.5-7B + LoRA · 9-signal distress taxonomy · F1=0.85</p>
+      </div>
+      <footer class="card-footer">
+        <a href="{{ '/2026/03/26/guardrail-dataset/' | relative_url }}" class="card-footer-item">Post</a>
+        <a href="https://github.com/Aser97/Guardrail" class="card-footer-item" target="_blank" rel="noopener">GitHub</a>
+      </footer>
+    </div>
+  </div>
+
+  <div class="column is-half">
+    <div class="card">
+      <div class="card-content">
+        <p class="title is-6">🧾 Visual-TableQA Pipeline</p>
+        <p class="subtitle is-7 has-text-grey">Multimodal reasoning · 2 500 LaTeX tables · 9 000 QA pairs · LLM-jury QC</p>
+      </div>
+      <footer class="card-footer">
+        <a href="{{ '/Projects/Visual-TableQA/' | relative_url }}" class="card-footer-item">Project</a>
+        <a href="https://github.com/AI-4-Everyone/Visual-TableQA-v2" class="card-footer-item" target="_blank" rel="noopener">GitHub</a>
+      </footer>
+    </div>
+  </div>
+
+  <div class="column is-half">
+    <div class="card">
+      <div class="card-content">
+        <p class="title is-6">🧬 Multi-Objective Token Representation</p>
+        <p class="subtitle is-7 has-text-grey">LESA + Xval · Numerical reasoning · CamemBERT-Bio</p>
+      </div>
+      <footer class="card-footer">
+        <a href="{{ '/Projects/LESA/' | relative_url }}" class="card-footer-item">Project</a>
+        <a href="https://github.com/sadc-lab/multiobjective_token_representation" class="card-footer-item" target="_blank" rel="noopener">GitHub</a>
+      </footer>
+    </div>
+  </div>
+
+  <div class="column is-half">
+    <div class="card">
+      <div class="card-content">
+        <p class="title is-6">⚖️ Optimal Transport for Color Transfer</p>
+        <p class="subtitle is-7 has-text-grey">Unbalanced OT · Color distribution transfer · Visualizations</p>
+      </div>
+      <footer class="card-footer">
+        <a href="{{ '/Projects/Optimal/' | relative_url }}" class="card-footer-item">Project</a>
+        <a href="https://github.com/Aser97/Optimal-Transport" class="card-footer-item" target="_blank" rel="noopener">GitHub</a>
+      </footer>
+    </div>
+  </div>
+
+  <div class="column is-half">
+    <div class="card">
+      <div class="card-content">
+        <p class="title is-6">♟️ Reinforcement Learning for Chess</p>
+        <p class="subtitle is-7 has-text-grey">C++ · SARSA + Monte Carlo · ~1350 Elo after 1h self-play</p>
+      </div>
+      <footer class="card-footer">
+        <a href="{{ '/Projects/Chess/' | relative_url }}" class="card-footer-item">Project</a>
+        <a href="https://github.com/Aser97/Chess" class="card-footer-item" target="_blank" rel="noopener">GitHub</a>
+      </footer>
+    </div>
+  </div>
+
+</div>
+
+## 🧠 Tech Stack
+
+- **Languages:** Python · Model Context Protocol (MCP) · JavaScript · C++ · Bash · HTML/CSS
+- **Frameworks:** PyTorch · Transformers · JAX · Hugging Face · APIs
+- **Tools:** Docker · Paperspace
+- **Focus Areas:** Visual-Reasoning · Number Encoding · Reinforcement Learning · Applied Maths
