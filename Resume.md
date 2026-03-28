@@ -24,7 +24,7 @@ sidebar_label: 📄 Full Resume
 ## 📄 Research
 - **Boammani Aser Lompo, Marc Haraoui**  
   *MODALITY-SWAP DISTILLATION: Rendering Textual Reasoning into Visual Supervision.*  
-  Under review at **ICLR 2026** — [PDF]({{ site.baseurl }}/assets/documents/Visual_TableQA_ICLR_2026.pdf)
+  (submission soon) — [PDF]({{ site.baseurl }}/assets/documents/Visual_TableQA_ICLR_2026.pdf)
 - **Boammani Aser Lompo, Marc Haraoui**  
   *Visual-TableQA: Open-Domain Benchmark for Reasoning over Table Images.*  
   **NeurIPS 2025** Workshop on Foundations of Reasoning in LMs — [arXiv](https://arxiv.org/pdf/2509.07966)

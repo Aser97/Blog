@@ -4,7 +4,7 @@
 
 layout: page
 title: MODALITY-SWAP DISTILLATION, Rendering Textual Reasoning into Visual Supervision
-subtitle: Under review as a conference paper at ICLR 2026
+subtitle: submission soon
 menubar_toc: true
 hero_compact: true
 sidebar_docs_label: "📘 Resources"
