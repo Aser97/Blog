@@ -27,7 +27,7 @@ description: >
 timezone: "America/Toronto"   # or your actual TZ
 
 baseurl: "/Blog" # the subpath of your site, e.g. /blog
-url: "" # set to https://Aser97.github.io before deploying to GitHub Pages
+url: "https://Aser97.github.io"
 twitter_username: AserLompo
 github_username:  Aser97
 fixed_navbar: top
