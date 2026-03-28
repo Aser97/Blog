@@ -5,3 +5,7 @@ _site
 vendor
 node_modules
 CLAUDE.md
+
+# macOS
+.DS_Store
+**/.DS_Store
