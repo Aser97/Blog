@@ -311,13 +311,6 @@ code {
 
 /* --- Light-mode override for the same hero --- */
 @media (prefers-color-scheme: light) {
-  .ms-hero {
-    background:
-      radial-gradient(900px 450px at 15% -10%, #c7e9ff 0%, transparent 45%),
-      radial-gradient(900px 450px at 95% 0%,  #e3d5ff 0%, transparent 45%),
-      linear-gradient(180deg, #f7fafc, #ffffff);
-    border-bottom: 1px solid #e5e7eb;
-  }
   .ms-hero .title   { color: #0f172a; }
   .ms-hero .subtitle{ color: #334155; }
 }

@@ -30,8 +30,10 @@ sidebar_label: 📄 Full Resume
   **NeurIPS 2025** Workshop on Foundations of Reasoning in LMs — [arXiv](https://arxiv.org/pdf/2509.07966)
 - **Boammani Aser Lompo, Thanh-Dung Le, Philippe Jouvet, Rita Noumeir**  
   *Multi-objective Representation for Numbers in Clinical Narratives: A CamemBERT-Bio-Based Alternative to Large-Scale LLMs.*  **CoRR 2024** — [doi](https://doi.org/10.48550/arXiv.2405.18448)
-- **Camille-Sovanneary Gauthier, Romaric Gaudel, Elisa Fromont, Boammani Aser Lompo**  
+- **Camille-Sovanneary Gauthier, Romaric Gaudel, Elisa Fromont, Boammani Aser Lompo**
   *Parametric Graph for Unimodal Ranking Bandit.* **ICML 2021** — [HAL](https://hal.archives-ouvertes.fr/hal-03256621/)
+- **Boammani Aser Lompo**
+  *Impact of Spurious Correlation on Gradient Descent Dynamics and Generalization.* (submission soon) — [GitHub](https://github.com/Aser97/Class-Imbalance-And-Gradient-Descent-Dynamics)
 
 - **Reviewer:** ICCV 2023 • CVPR 2026 • ICLR 2026
 
