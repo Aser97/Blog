@@ -3,15 +3,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="{{ site.theme_color | default: '#ffffff' }}">
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/app.css">
-    <link
-        rel="shortcut icon"
-        type="image/png"
-        {% if site.favicon %}
-            href="{{ site.favicon | relative_url }}"
-        {% else %}
-            href="{{ site.baseurl }}/favicon.png"
-        {% endif %}
-    >
+    {% if site.favicon %}
+        <link rel="icon" href="{{ site.favicon | relative_url }}">
+    {% else %}
+        <link rel="icon" type="image/svg+xml" href="{{ '/assets/favicon/favicon.svg' | relative_url }}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/favicon/favicon-32.png' | relative_url }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/favicon/favicon-16.png' | relative_url }}">
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/favicon/apple-touch-icon.png' | relative_url }}">
+    {% endif %}
     <script defer src="https://unpkg.com/alpinejs@3.9.0/dist/cdn.min.js"></script>
     <script
         src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"
