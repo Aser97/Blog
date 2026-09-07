@@ -7,7 +7,7 @@ hero_compact: true
 sidebar_docs_label: "📘 Resources"
 sidebar_docs:
   - label: "GITHUB"
-    url: https://github.com/Aser97/Class-Imbalance-And-Gradient-Descent-Dynamics
+    url: https://github.com/Aser97/Spurious-Correlation-And-Gradient-Descent-Dynamics
     thumb: /assets/thumbnails/github_thumb.svg
   - label: "FULL ARTICLE"
     url: /assets/documents/Implicit_Bias_of_GD_under_Spurious_Correlation.pdf
