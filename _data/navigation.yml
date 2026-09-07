@@ -1,5 +1,9 @@
 - name: 🎨 Portfolio
   dropdown:
+    - name: 🔍 Making Learned Programs Explicit
+      link: /Projects/N2P
+    - name: 🌀 Implicit Bias under Spurious Correlations
+      link: /Projects/Spurious-Correlation
     - name: 🔄 Modality Swap — VLM Fine-tuning
       link: /Projects/Modality-Swap
     - name: 📊 Visual-TableQA — Multimodal Dataset

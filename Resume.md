@@ -22,24 +22,39 @@ sidebar_label: 📄 Full Resume
 - **2019–2021** — Master of Fundamental Mathematics / **Agrégation de Mathématiques**, **ENS Rennes**
 
 ## 📄 Research
+- **Boammani Aser Lompo**
+  *Making Learned Programs Explicit: direction-level exclusivity as a safety criterion for editing LLM circuits.*
+  **Ongoing** — [Project page]({{ '/Projects/N2P/' | relative_url }}) · [GitHub](https://github.com/galaxy532/N2P-Experiments)
 - **Boammani Aser Lompo, Marc Haraoui**  
   *MODALITY-SWAP DISTILLATION: Rendering Textual Reasoning into Visual Supervision.*  
   (submission soon) — [PDF]({{ site.baseurl }}/assets/documents/Visual_TableQA_ICLR_2026.pdf)
 - **Boammani Aser Lompo, Marc Haraoui**  
   *Visual-TableQA: Open-Domain Benchmark for Reasoning over Table Images.*  
   **NeurIPS 2025** Workshop on Foundations of Reasoning in LMs — [arXiv](https://arxiv.org/pdf/2509.07966)
-- **Boammani Aser Lompo, Thanh-Dung Le, Philippe Jouvet, Rita Noumeir**  
-  *Multi-objective Representation for Numbers in Clinical Narratives: A CamemBERT-Bio-Based Alternative to Large-Scale LLMs.*  **CoRR 2024** — [doi](https://doi.org/10.48550/arXiv.2405.18448)
+- **Boammani Aser Lompo, Patrik Kenfack**
+  *Implicit Bias of Gradient Descent under Feature-Mediated Spurious Correlations.* **Preprint, under submission** — [Page]({{ '/Projects/Spurious-Correlation/' | relative_url }}) · [GitHub](https://github.com/Aser97/Class-Imbalance-And-Gradient-Descent-Dynamics)
 - **Camille-Sovanneary Gauthier, Romaric Gaudel, Elisa Fromont, Boammani Aser Lompo**
   *Parametric Graph for Unimodal Ranking Bandit.* **ICML 2021** — [HAL](https://hal.archives-ouvertes.fr/hal-03256621/)
-- **Boammani Aser Lompo**
-  *Impact of Spurious Correlation on Gradient Descent Dynamics and Generalization.* (submission soon) — [GitHub](https://github.com/Aser97/Class-Imbalance-And-Gradient-Descent-Dynamics)
-
-- **Reviewer:** ICCV 2023 • CVPR 2026 • ICLR 2026
+- **Boammani Aser Lompo, Thanh-Dung Le, Philippe Jouvet, Rita Noumeir**  
+  *Multi-objective Representation for Numbers in Clinical Narratives: A CamemBERT-Bio-Based Alternative to Large-Scale LLMs.*  **under submission** — [doi](https://doi.org/10.48550/arXiv.2405.18448)
+- **Reviewer:** ICCV 2023 • CVPR 2026 • NeurIPS 2026 • ICLR 2026
 
 ## 🧩 Featured Projects
 
 <div class="columns is-multiline">
+
+  <div class="column is-half">
+    <div class="card">
+      <div class="card-content">
+        <p class="title is-6">🔍 Making Learned Programs Explicit</p>
+        <p class="subtitle is-7 has-text-grey">Mechanistic interpretability · GPT-J / Llama-3-8B · Circuit ID + SAE feature tracking · Edit-safety criterion</p>
+      </div>
+      <footer class="card-footer">
+        <a href="{{ '/Projects/N2P/' | relative_url }}" class="card-footer-item">Project</a>
+        <a href="https://github.com/galaxy532/N2P-Experiments" class="card-footer-item" target="_blank" rel="noopener">GitHub</a>
+      </footer>
+    </div>
+  </div>
 
   <div class="column is-half">
     <div class="card">
@@ -109,7 +124,9 @@ sidebar_label: 📄 Full Resume
 </div>
 
 ## 🎯 Interests
-- Applied Mathematics, AI/ML (Reasoning, Foundation Models, Reinforcement Learning), AI Fairness, AI Safety
+- **AI Safety & Mechanistic Interpretability** — circuits, sparse autoencoders, and safe model editing
+- Learning theory (implicit bias, spurious correlations, generalization)
+- Applied Mathematics, AI/ML (Reasoning, Foundation Models, Reinforcement Learning), AI Fairness
 
 ## 💼 Internships
 - **CREST (ENSAI, Rennes) — 2021**  

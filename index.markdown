@@ -19,7 +19,7 @@ hero_compact: true
   <div class="column">
     <h2 class="title is-4" style="margin-bottom:.35rem;">Hi, I’m Aser 👋</h2>
     <p class="is-size-5" style="max-width:58ch;">
-      MSc in Mathematics & Machine Learning. I work on <strong>Visual Reasoning</strong>,
+      MSc in Mathematics & Machine Learning. I work on <strong>AI Safety</strong>,
       <strong>Reinforcement Learning</strong>, and elegant bridges between theory and application,
       especially with multimodal models.
     </p>
@@ -63,30 +63,49 @@ hero_compact: true
 </div>
 
 ## 🎯 Interests
-- Applied Mathematics, AI/ML (Reasoning, Foundation Models, Reinforcement Learning), AI Fairness, AI Safety
+- **AI Safety & Mechanistic Interpretability** — circuits, sparse autoencoders, and safe model editing
+- Learning theory (implicit bias, spurious correlations, generalization)
+- Applied Mathematics, AI/ML (Reasoning, Foundation Models, Reinforcement Learning), AI Fairness
 
 ## 📄 Research
+- **Boammani Aser Lompo**
+  *Making Learned Programs Explicit: direction-level exclusivity as a safety criterion for editing LLM circuits.*
+  **Ongoing** — <a href="{{ '/Projects/N2P/' | relative_url }}" class="tag is-link is-light">Project page</a>
+  <a href="https://github.com/galaxy532/N2P-Experiments" class="tag is-dark is-light" target="_blank" rel="noopener">GitHub</a>
 - **Boammani Aser Lompo, Marc Haraoui**
   *MODALITY-SWAP DISTILLATION: Rendering Textual Reasoning into Visual Supervision.*
   (submission soon) — <a href="{{ site.baseurl }}/assets/documents/Visual_TableQA_ICLR_2026.pdf" class="tag is-link is-light" target="_blank">PDF</a>
 - **Boammani Aser Lompo, Marc Haraoui**
   *Visual-TableQA: Open-Domain Benchmark for Reasoning over Table Images.*
   **NeurIPS 2025 Workshop** — <a href="https://arxiv.org/pdf/2509.07966" class="tag is-info is-light" target="_blank">arXiv</a>
-- **Boammani Aser Lompo, Thanh-Dung Le, Philippe Jouvet, Rita Noumeir**
-  *Multi-objective Representation for Numbers in Clinical Narratives: A CamemBERT-Bio-Based Alternative to Large-Scale LLMs.* **CoRR 2024** —
-  <a href="https://doi.org/10.48550/arXiv.2405.18448" class="tag is-info is-light" target="_blank" rel="noopener">DOI</a>
+- **Boammani Aser Lompo, Patrik Kenfack**
+  *Implicit Bias of Gradient Descent under Feature-Mediated Spurious Correlations.* **Preprint, under submission** —
+  <a href="{{ '/Projects/Spurious-Correlation/' | relative_url }}" class="tag is-link is-light">Page</a>
+  <a href="https://github.com/Aser97/Class-Imbalance-And-Gradient-Descent-Dynamics" class="tag is-dark is-light" target="_blank" rel="noopener">GitHub</a>
 - **Camille-Sovanneary Gauthier, Romaric Gaudel, Elisa Fromont, Boammani Aser Lompo**
   *Parametric Graph for Unimodal Ranking Bandit.* **ICML 2021** —
   <a href="https://hal.archives-ouvertes.fr/hal-03256621/" class="tag is-warning is-light" target="_blank" rel="noopener">HAL</a>
-- **Boammani Aser Lompo**
-  *Impact of Spurious Correlation on Gradient Descent Dynamics and Generalization.* (submission soon) —
-  <a href="https://github.com/Aser97/Class-Imbalance-And-Gradient-Descent-Dynamics" class="tag is-dark is-light" target="_blank" rel="noopener">GitHub</a>
-
-- **Reviewer:** ICCV 2023 • CVPR 2026 • ICLR 2026
+- **Boammani Aser Lompo, Thanh-Dung Le, Philippe Jouvet, Rita Noumeir**
+  *Multi-objective Representation for Numbers in Clinical Narratives: A CamemBERT-Bio-Based Alternative to Large-Scale LLMs.* **under submission** —
+  <a href="https://doi.org/10.48550/arXiv.2405.18448" class="tag is-info is-light" target="_blank" rel="noopener">DOI</a>
+- **Reviewer:** ICCV 2023 • CVPR 2026 • ICLR 2026 • NeurIPS 2026
 
 ## 🧩 Featured Projects
 
 <div class="columns is-multiline">
+
+  <div class="column is-half">
+    <div class="card">
+      <div class="card-content">
+        <p class="title is-6">🔍 Making Learned Programs Explicit</p>
+        <p class="subtitle is-7 has-text-grey">Mechanistic interpretability · GPT-J / Llama-3-8B · Circuit ID + SAE feature tracking · Edit-safety criterion</p>
+      </div>
+      <footer class="card-footer">
+        <a href="{{ '/Projects/N2P/' | relative_url }}" class="card-footer-item">Project</a>
+        <a href="https://github.com/galaxy532/N2P-Experiments" class="card-footer-item" target="_blank" rel="noopener">GitHub</a>
+      </footer>
+    </div>
+  </div>
 
   <div class="column is-half">
     <div class="card">
@@ -160,4 +179,5 @@ hero_compact: true
 - **Languages:** Python · Model Context Protocol (MCP) · JavaScript · C++ · Bash · HTML/CSS
 - **Frameworks:** PyTorch · Transformers · JAX · Hugging Face · APIs
 - **Tools:** Docker · Paperspace
-- **Focus Areas:** Visual-Reasoning · Number Encoding · Reinforcement Learning · Applied Maths
+- **Interpretability:** TransformerLens · SAELens · Edge Pruning · Tracr · activation/path patching
+- **Focus Areas:** Interpretability · AI Safety · Visual-Reasoning · Number Encoding · Applied Maths
